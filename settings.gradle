@@ -1,0 +1,2 @@
+include ':app', ':soundline'
+rootProject.name='SoundLine'
