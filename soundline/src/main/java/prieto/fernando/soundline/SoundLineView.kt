@@ -25,11 +25,11 @@ class SoundLineView @JvmOverloads constructor(
             scrollView: ObservableScrollView,
             x: Int,
             y: Int,
-            oldx: Int,
-            oldy: Int,
-            fling: Boolean
+            oldX: Int,
+            oldY: Int,
+            isFling: Boolean
         ) {
-            isFling = fling
+            this@SoundLineView.isFling = isFling
             if (scrollView === scrollViewLeft) {
                 scrollViewRight.scrollTo(x, y)
             } else if (scrollView === scrollViewRight) {
@@ -42,19 +42,16 @@ class SoundLineView @JvmOverloads constructor(
             isScrollViewTouched = isTouched
         }
 
-        override fun onScrollStopped(oldX: Int) {
-            //resume player on oldX position
-        }
+        override fun onScrollStopped(oldX: Int) {}
 
         override fun onScrollReset() {}
 
-        override fun onScrollEnd() {
-            // set your player to End
-        }
+        override fun onScrollEnd() {}
     }
 
     init {
         View.inflate(context, R.layout.soundline_view, this)
+
         scrollViewLeft = findViewById(R.id.scroll_left)
         scrollViewRight = findViewById(R.id.scroll_right)
         screenWidth = getScreenWidth()
