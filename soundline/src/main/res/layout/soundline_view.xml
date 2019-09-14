@@ -17,7 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/soundwave_green_0" />
+                android:src="@drawable/soundwave_first_default_0" />
     </prieto.fernando.soundline.ObservableScrollView>
 
     <prieto.fernando.soundline.ObservableScrollView
@@ -32,7 +32,7 @@
                 android:id="@+id/wave_right"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/soundwave_white_0" />
+                android:src="@drawable/soundwave_second_default_0" />
     </prieto.fernando.soundline.ObservableScrollView>
     <View
             android:id="@+id/half_view"
