@@ -6,14 +6,14 @@ interface ScrollViewListener {
         scrollView: ObservableScrollView,
         x: Int,
         y: Int,
-        oldx: Int,
-        oldy: Int,
+        oldX: Int,
+        oldY: Int,
         isFling: Boolean
     )
 
     fun onScrollTouched(isTouched: Boolean, isFling: Boolean)
 
-    fun onScrollStopped(oldx: Int)
+    fun onScrollStopped(oldX: Int)
 
     fun onScrollReset()
 

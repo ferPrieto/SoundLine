@@ -7,7 +7,6 @@ import android.view.View
 import android.widget.HorizontalScrollView
 import kotlin.math.abs
 
-
 class ObservableScrollView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : HorizontalScrollView(context, attrs, defStyleAttr), View.OnTouchListener {
