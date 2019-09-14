@@ -1,14 +1,15 @@
 package prieto.fernando.soundline
 
 import android.content.Context
+import android.content.res.TypedArray
 import android.graphics.Point
 import android.util.AttributeSet
 import android.view.View
 import android.view.WindowManager
 import android.widget.FrameLayout
+import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.soundline_view.view.wave_left as waveViewLeft
 import kotlinx.android.synthetic.main.soundline_view.view.wave_right as waveViewRight
-
 
 class SoundLineView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -57,6 +58,38 @@ class SoundLineView @JvmOverloads constructor(
         screenWidth = getScreenWidth()
         setWavePadding()
         setScrollViewListeners()
+        attrs?.let(::setAttributeSetOrDefault) ?: run { setDefaultDrawables() }
+    }
+
+    private fun setAttributeSetOrDefault(attributeSet: AttributeSet) {
+        val ta = context.obtainStyledAttributes(attributeSet, R.styleable.SoundLineView)
+        setCustomDrawables(ta)
+        ta.recycle()
+    }
+
+    private fun setDefaultDrawables() {
+        val waveFirstDrawable =
+            ContextCompat.getDrawable(context, R.drawable.soundwave_first_default_0)
+        val waveSecondDrawable =
+            ContextCompat.getDrawable(context, R.drawable.soundwave_second_default_0)
+        waveViewLeft.setImageDrawable(waveFirstDrawable)
+        waveViewRight.setImageDrawable(waveSecondDrawable)
+    }
+
+    private fun setCustomDrawables(ta: TypedArray) {
+        val waveFirstDrawable =
+            ta.getDrawable(R.styleable.SoundLineView_wave_first_src) ?: ContextCompat.getDrawable(
+                context,
+                R.drawable.soundwave_first_default_0
+            )
+        val waveSecondDrawable =
+            ta.getDrawable(R.styleable.SoundLineView_wave_second_src) ?: ContextCompat.getDrawable(
+                context,
+                R.drawable.soundwave_second_default_0
+            )
+
+        waveViewLeft.setImageDrawable(waveFirstDrawable)
+        waveViewRight.setImageDrawable(waveSecondDrawable)
     }
 
     private fun setWavePadding() {
