@@ -12,7 +12,9 @@ import kotlinx.android.synthetic.main.soundline_view.view.wave_left as waveViewL
 import kotlinx.android.synthetic.main.soundline_view.view.wave_right as waveViewRight
 
 class SoundLineView @JvmOverloads constructor(
-    context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0
 ) : FrameLayout(context, attrs, defStyleAttr) {
     private var isFling = false
     private var isScrollViewTouched = false

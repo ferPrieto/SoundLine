@@ -10,7 +10,7 @@ import kotlin.math.abs
 class ObservableScrollView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : HorizontalScrollView(context, attrs, defStyleAttr), View.OnTouchListener {
-    private lateinit var internalScrollViewListener: ScrollViewListener
+    private var internalScrollViewListener: ScrollViewListener? = null
     private var isFling = false
     private var waveWidth: Int = 0
 
@@ -27,7 +27,7 @@ class ObservableScrollView @JvmOverloads constructor(
     }
 
     override fun onScrollChanged(x: Int, y: Int, oldX: Int, oldY: Int) {
-        internalScrollViewListener?.let { scrollViewListener ->
+        internalScrollViewListener?.let {
             if (isFling) {
                 when {
                     abs(x - oldX) < 2 -> onScrollStopped(x)
@@ -39,32 +39,37 @@ class ObservableScrollView @JvmOverloads constructor(
 
         }
         super.onScrollChanged(x, y, oldX, oldY)
-        if (internalScrollViewListener != null) {
-            internalScrollViewListener.onScrollChanged(this, x, y, oldX, oldY, isFling)
-        }
+        internalScrollViewListener?.onScrollChanged(this, x, y, oldX, oldY, isFling)
     }
 
     private fun onScrollStopped(x: Int) {
-        internalScrollViewListener.onScrollStopped(x)
+        internalScrollViewListener?.onScrollStopped(x)
         isFling = false
     }
 
     private fun onScrollEnd() {
-        internalScrollViewListener.onScrollEnd()
+        internalScrollViewListener?.onScrollEnd()
         isFling = false
     }
 
     private fun onScrollReset() {
-        internalScrollViewListener.onScrollReset()
+        internalScrollViewListener?.onScrollReset()
         isFling = false
     }
 
     override fun onTouch(v: View?, event: MotionEvent?): Boolean {
         event?.let { motionEvent ->
             when (motionEvent.action) {
-                MotionEvent.ACTION_DOWN -> internalScrollViewListener.onScrollTouched(true, isFling)
+                MotionEvent.ACTION_DOWN -> internalScrollViewListener?.onScrollTouched(
+                    true,
+                    isFling
+                )
                 MotionEvent.ACTION_UP,
-                MotionEvent.ACTION_CANCEL -> internalScrollViewListener.onScrollTouched(false, isFling)
+                MotionEvent.ACTION_CANCEL -> internalScrollViewListener?.onScrollTouched(
+                    false,
+                    isFling
+                )
+                else -> null
             }
         }
         return false
