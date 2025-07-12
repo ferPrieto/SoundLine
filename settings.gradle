@@ -1,2 +1,2 @@
-include ':app', ':soundline'
+include ':app', ':audiowaveformview'
 rootProject.name='SoundLine'

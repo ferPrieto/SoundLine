@@ -9,7 +9,7 @@ import android.view.WindowManager
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.core.content.ContextCompat
-import prieto.fernando.soundline.library.R
+import com.github.fprieto.audiowaveformview.R
 
 class SoundLineView @JvmOverloads constructor(
     context: Context,
