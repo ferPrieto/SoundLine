@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <prieto.fernando.soundline.ObservableScrollView
+            android:id="@+id/scroll_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scrollview_bottom_margin"
+            android:layout_toLeftOf="@+id/half_view"
+            android:scrollbars="none">
+
+        <ImageView
+                android:id="@+id/wave_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/soundwave_first_default_0" />
+    </prieto.fernando.soundline.ObservableScrollView>
+
+    <prieto.fernando.soundline.ObservableScrollView
+            android:id="@+id/scroll_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scrollview_bottom_margin"
+            android:layout_toRightOf="@+id/half_view"
+            android:scrollbars="none">
+
+        <ImageView
+                android:id="@+id/wave_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/soundwave_second_default_0" />
+    </prieto.fernando.soundline.ObservableScrollView>
+    <View
+            android:id="@+id/half_view"
+            android:layout_width="2dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true" />
+</RelativeLayout>

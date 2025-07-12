@@ -1,0 +1,104 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'maven-publish'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    
+    namespace 'com.github.fprieto.audiowaveformview'
+    
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    
+    // Use specific AndroidX versions to avoid compatibility issues  
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.core:core:1.12.0'
+}
+
+// Force resolution of compatible AndroidX versions
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.12.0'
+        force 'androidx.core:core-ktx:1.12.0'
+        force 'androidx.appcompat:appcompat:1.6.1'
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                from components.release
+                
+                groupId = 'com.github.fprieto'
+                artifactId = 'audiowaveformview'
+                version = '1.0.0'
+                
+                pom {
+                    name = 'AudioWaveformView'
+                    description = 'A custom Android view that displays audio waveforms with scrollable timeline interface similar to SoundCloud'
+                    url = 'https://github.com/fprieto/AudioWaveformView'
+                    
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    
+                    developers {
+                        developer {
+                            id = 'fprieto'
+                            name = 'Fernando Prieto'
+                            email = 'f.prieto.moyano@gmail.com'
+                        }
+                    }
+                    
+                    scm {
+                        connection = 'scm:git:github.com/fprieto/AudioWaveformView.git'
+                        developerConnection = 'scm:git:ssh://github.com/fprieto/AudioWaveformView.git'
+                        url = 'https://github.com/fprieto/AudioWaveformView/tree/master'
+                    }
+                }
+            }
+        }
+    }
+}
