@@ -123,4 +123,37 @@ class SoundLineView @JvmOverloads constructor(
         scrollViewLeft.setScrollViewListener(scrollViewListener)
         scrollViewRight.setScrollViewListener(scrollViewListener)
     }
+    
+    /**
+     * Set custom wave drawables for Compose integration
+     * @param firstDrawable Drawable for the first wave (left side), pass null to keep current
+     * @param secondDrawable Drawable for the second wave (right side), pass null to keep current
+     */
+    fun setWaveDrawables(firstDrawable: android.graphics.drawable.Drawable?, secondDrawable: android.graphics.drawable.Drawable?) {
+        firstDrawable?.let { waveViewLeft.setImageDrawable(it) }
+        secondDrawable?.let { waveViewRight.setImageDrawable(it) }
+    }
+    
+    /**
+     * Refresh wave drawables after setting new ones
+     */
+    fun refreshWaveDrawables() {
+        waveViewLeft.invalidate()
+        waveViewRight.invalidate()
+    }
+    
+    /**
+     * Get current scroll position for state management
+     */
+    fun getScrollPosition(): Int {
+        return scrollViewLeft.scrollX
+    }
+    
+    /**
+     * Set scroll position programmatically
+     */
+    fun setScrollPosition(position: Int) {
+        scrollViewLeft.scrollTo(position, 0)
+        scrollViewRight.scrollTo(position, 0)
+    }
 }

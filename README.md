@@ -95,6 +95,7 @@ In your layout add **prieto.fernando.soundline.SoundLineView** and you can speci
 
 ### Kotlin Code
 
+#### Traditional View-based approach
 ```kotlin
 import prieto.fernando.soundline.SoundLineView
 
@@ -104,7 +105,34 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         
         val soundLineView = findViewById<SoundLineView>(R.id.soundLineView)
-        // Configure your SoundLineView here
+        soundLineView.initWaves()
+    }
+}
+```
+
+#### Jetpack Compose approach
+```kotlin
+import androidx.compose.ui.unit.dp
+import prieto.fernando.soundline.AudioWaveformView
+
+@Composable
+fun AudioWaveformScreen() {
+    Column {
+        // Default waveform
+        AudioWaveformView(
+            modifier = Modifier.fillMaxWidth(),
+            height = 120.dp,
+            autoInit = true
+        )
+        
+        // Custom waveform
+        AudioWaveformView(
+            modifier = Modifier.fillMaxWidth(),
+            height = 120.dp,
+            waveFirstSrc = R.drawable.custom_first_default_0,
+            waveSecondSrc = R.drawable.custom_second_default_0,
+            autoInit = true
+        )
     }
 }
 ```

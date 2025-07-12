@@ -8,10 +8,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
+        <!-- Compose-based MainActivity (default launcher) -->
         <activity
-                android:name=".view.MainActivity"
+                android:name=".view.ComposeMainActivity"
                 android:screenOrientation="portrait"
-                android:exported="true">
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
