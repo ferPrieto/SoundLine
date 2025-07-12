@@ -7,9 +7,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.WindowManager
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.soundline_view.view.wave_left as waveViewLeft
-import kotlinx.android.synthetic.main.soundline_view.view.wave_right as waveViewRight
+import prieto.fernando.soundline.library.R
 
 class SoundLineView @JvmOverloads constructor(
     context: Context,
@@ -22,6 +22,8 @@ class SoundLineView @JvmOverloads constructor(
 
     private lateinit var scrollViewLeft: ObservableScrollView
     private lateinit var scrollViewRight: ObservableScrollView
+    private lateinit var waveViewLeft: ImageView
+    private lateinit var waveViewRight: ImageView
 
     private val scrollViewListener = object : ScrollViewListener {
         override fun onScrollChanged(
@@ -57,6 +59,9 @@ class SoundLineView @JvmOverloads constructor(
 
         scrollViewLeft = findViewById(R.id.scroll_left)
         scrollViewRight = findViewById(R.id.scroll_right)
+        waveViewLeft = findViewById(R.id.wave_left)
+        waveViewRight = findViewById(R.id.wave_right)
+        
         screenWidth = getScreenWidth()
         setWavePadding()
         setScrollViewListeners()
