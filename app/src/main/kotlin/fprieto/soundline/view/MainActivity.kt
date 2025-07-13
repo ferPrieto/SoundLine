@@ -125,6 +125,10 @@ fun AudioWaveformScreen() {
                 val intent = Intent(context, UseCasesActivity::class.java)
                 context.startActivity(intent)
             },
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFFFF9800), // Orange color
+                contentColor = Color.White
+            ),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(

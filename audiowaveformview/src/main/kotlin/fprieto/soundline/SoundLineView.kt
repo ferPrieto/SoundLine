@@ -19,11 +19,12 @@ class SoundLineView @JvmOverloads constructor(
     private var isFling = false
     private var isScrollViewTouched = false
     private var screenWidth: Int = 0
+    private var isSynchronizing = false
 
     private lateinit var scrollViewLeft: ObservableScrollView
     private lateinit var scrollViewRight: ObservableScrollView
-    private lateinit var waveViewLeft: ImageView
-    private lateinit var waveViewRight: ImageView
+    private var waveViewLeft: ImageView
+    private var waveViewRight: ImageView
 
     private val scrollViewListener = object : ScrollViewListener {
         override fun onScrollChanged(
@@ -35,10 +36,21 @@ class SoundLineView @JvmOverloads constructor(
             isFling: Boolean
         ) {
             this@SoundLineView.isFling = isFling
-            if (scrollView === scrollViewLeft) {
-                scrollViewRight.scrollTo(x, y)
-            } else if (scrollView === scrollViewRight) {
-                scrollViewLeft.scrollTo(x, y)
+            
+            // Prevent recursive scroll synchronization
+            if (isSynchronizing) return
+            
+            isSynchronizing = true
+            try {
+                val offset = screenWidth / 12  // Adjust offset to test alignment
+                
+                if (scrollView === scrollViewLeft) {
+                    scrollViewRight.scrollTo(x - offset, y)
+                } else if (scrollView === scrollViewRight) {
+                    scrollViewLeft.scrollTo(x + offset, y)
+                }
+            } finally {
+                isSynchronizing = false
             }
         }
 
@@ -107,7 +119,17 @@ class SoundLineView @JvmOverloads constructor(
     fun initWaves() {
         scrollViewLeft.setWaveWidth(waveViewLeft.width - screenWidth / 2)
         scrollViewRight.setWaveWidth(waveViewRight.width - screenWidth / 2)
-        scrollViewRight.smoothScrollTo(0, 0)
+        
+        // Initialize with offset: left wave more scrolled than right wave
+        val offset = screenWidth / 12
+        
+        isSynchronizing = true
+        try {
+            scrollViewLeft.scrollTo(offset, 0)
+            scrollViewRight.scrollTo(0, 0)
+        } finally {
+            isSynchronizing = false
+        }
     }
 
     private fun getScreenWidth(): Int {
@@ -146,14 +168,21 @@ class SoundLineView @JvmOverloads constructor(
      * Get current scroll position for state management
      */
     fun getScrollPosition(): Int {
-        return scrollViewLeft.scrollX
+        return scrollViewRight.scrollX
     }
     
     /**
      * Set scroll position programmatically
      */
     fun setScrollPosition(position: Int) {
-        scrollViewLeft.scrollTo(position, 0)
-        scrollViewRight.scrollTo(position, 0)
+        val offset = screenWidth / 12
+        
+        isSynchronizing = true
+        try {
+            scrollViewLeft.scrollTo(position + offset, 0)
+            scrollViewRight.scrollTo(position, 0)
+        } finally {
+            isSynchronizing = false
+        }
     }
 }
