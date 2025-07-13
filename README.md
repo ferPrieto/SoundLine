@@ -39,7 +39,7 @@ fun MyScreen() {
 
 ## Demo
 
-![TimelineView Demo](art/SoundLine.gif)
+![TimelineView Demo](art/TimelineView-demo.gif)
 
 ## Structure
 
