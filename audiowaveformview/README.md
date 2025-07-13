@@ -1,114 +1,141 @@
 # AudioWaveformView
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.fprieto/audiowaveformview.svg)](https://search.maven.org/artifact/com.github.fprieto/audiowaveformview)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+A synchronized dual-view audio waveform visualization component for Android with native Compose support.
 
-A custom Android view that displays audio waveforms with a scrollable timeline interface, similar to SoundCloud's track visualization.
+## Overview
+
+AudioWaveformView provides a synchronized scrolling experience with two waveform views that move in complementary directions. The component is built with Jetpack Compose for modern Android development.
 
 ## Features
 
-- 🎵 **Dual Waveform Display**: Shows both completed and remaining portions of audio
-- 📱 **Smooth Scrolling**: Synchronized horizontal scrolling between waveform views
-- 🎨 **Customizable**: Configurable waveform images and colors
-- 🔄 **Interactive**: Touch and fling gestures for smooth navigation
-- 📐 **Responsive**: Adapts to different screen sizes and orientations
-
-## Screenshots
-
-![AudioWaveformView Demo](../art/SoundLine.gif)
-
-## Installation
-
-Add this to your module's `build.gradle` file:
-
-```gradle
-dependencies {
-    implementation 'com.github.fprieto:audiowaveformview:1.0.0'
-}
-```
+- **Native Compose Implementation**: Pure Compose implementation without XML dependencies
+- **Synchronized Scrolling**: Perfect offset synchronization between left and right waveforms
+- **Customizable Offset**: Configure the scroll offset as a fraction of screen width
+- **Material 3 Support**: Built-in Material 3 styling variants
+- **Modern Architecture**: Uses Compose's declarative UI paradigm
 
 ## Usage
 
 ### Basic Implementation
 
-Add the view to your XML layout:
-
-```xml
-<prieto.fernando.soundline.SoundLineView
-    android:id="@+id/sound_line_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:wave_first_src="@drawable/your_completed_waveform"
-    app:wave_second_src="@drawable/your_remaining_waveform" />
+```kotlin
+@Composable
+fun MyScreen() {
+    AudioWaveformView(
+        height = 120.dp
+    )
+}
 ```
 
-Initialize in your Activity/Fragment:
+### With Custom Drawables
 
 ```kotlin
-val soundLineView = findViewById<SoundLineView>(R.id.sound_line_view)
-soundLineView.initWaves()
+@Composable
+fun MyScreen() {
+    AudioWaveformView(
+        height = 120.dp,
+        waveFirstSrc = R.drawable.my_custom_wave_1,
+        waveSecondSrc = R.drawable.my_custom_wave_2
+    )
+}
 ```
 
-### Custom Attributes
+### Advanced Configuration
 
-| Attribute | Description | Default |
-|-----------|-------------|---------|
-| `app:wave_first_src` | Drawable resource for the completed waveform | `soundwave_first_default_0` |
-| `app:wave_second_src` | Drawable resource for the remaining waveform | `soundwave_second_default_0` |
-
-### Available Waveform Resources
-
-The library includes several built-in waveform images:
-
-**Completed waveforms:**
-- `soundwave_first_default_0` (short)
-- `soundwave_first_default_1` (medium)  
-- `soundwave_first_default_2` (long)
-
-**Remaining waveforms:**
-- `soundwave_second_default_0` (short)
-- `soundwave_second_default_1` (medium)
-- `soundwave_second_default_2` (long)
-
-### Example with Custom Waveforms
-
-```xml
-<prieto.fernando.soundline.SoundLineView
-    android:id="@+id/sound_line_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:wave_first_src="@drawable/my_custom_active_wave"
-    app:wave_second_src="@drawable/my_custom_inactive_wave" />
+```kotlin
+@Composable
+fun MyScreen() {
+    AudioWaveformView(
+        height = 120.dp,
+        waveFirstSrc = R.drawable.my_custom_wave_1,
+        waveSecondSrc = R.drawable.my_custom_wave_2,
+        offsetFraction = 1f/8f, // Custom offset
+        dividerWidth = 1.dp,
+        dividerColor = Color.Gray
+    )
+}
 ```
 
-## How It Works
+### Simplified Version
 
-The AudioWaveformView uses two synchronized `HorizontalScrollView` components:
+```kotlin
+@Composable
+fun MyScreen() {
+    AudioWaveformViewSimple(
+        height = 120.dp
+    )
+}
+```
 
-1. **Left View**: Shows the "completed" portion of the audio waveform
-2. **Right View**: Shows the "remaining" portion of the audio waveform
+### Material 3 Styled
 
-When the user scrolls either view, both views are synchronized to maintain the timeline effect.
+```kotlin
+@Composable
+fun MyScreen() {
+    AudioWaveformViewMaterial3(
+        height = 120.dp
+    )
+}
+```
 
-## Requirements
+## API Reference
 
-- **Minimum SDK**: API 21 (Android 5.0)
-- **Target SDK**: API 34 (Android 14)
-- **Kotlin**: Compatible with Kotlin projects
+### AudioWaveformView
 
-## Sample App
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `modifier` | `Modifier` | `Modifier` | The modifier to be applied to the view |
+| `height` | `Dp` | `200.dp` | Height of the waveform view |
+| `waveFirstSrc` | `Int?` | `null` | Resource ID for the first wave drawable |
+| `waveSecondSrc` | `Int?` | `null` | Resource ID for the second wave drawable |
+| `offsetFraction` | `Float` | `1f/12f` | Scroll offset as fraction of screen width |
+| `dividerWidth` | `Dp` | `2.dp` | Width of the center divider |
+| `dividerColor` | `Color` | `Color.Transparent` | Color of the center divider |
 
-Check out the sample app in this repository to see AudioWaveformView in action.
+### AudioWaveformViewSimple
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `modifier` | `Modifier` | `Modifier` | The modifier to be applied to the view |
+| `height` | `Dp` | `120.dp` | Height of the waveform view |
+| `waveFirstSrc` | `Int?` | `null` | Resource ID for the first wave drawable |
+| `waveSecondSrc` | `Int?` | `null` | Resource ID for the second wave drawable |
+
+## Implementation Details
+
+### Synchronization Algorithm
+
+The component uses a sophisticated scroll synchronization mechanism:
+
+1. **Offset Calculation**: The left view is initialized with an offset of `screenWidth * offsetFraction`
+2. **Bidirectional Sync**: Changes in either scroll view trigger updates in the other
+3. **Smooth Scrolling**: Uses Compose's `LaunchedEffect` for smooth state updates
+4. **Preventing Loops**: Synchronization flags prevent infinite update loops
+
+### Performance Optimizations
+
+- **Native Compose**: No XML inflation or View interop overhead
+- **Efficient Recomposition**: Optimized state management to minimize recompositions
+- **Memory Efficient**: Uses Compose's built-in memory management
+
+## Default Drawables
+
+The component includes default waveform drawables:
+- `soundwave_first_default_0` - Default first waveform
+- `soundwave_second_default_0` - Default second waveform
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+When contributing to this component:
 
-## License
+1. Follow Material 3 design principles
+2. Ensure smooth performance on all screen sizes
+3. Add appropriate tests for new features
+4. Maintain the native Compose approach
 
-```
-Copyright 2024 Fernando Prieto
+#  License
+
+Copyright 2025 Fernando Prieto Moyano
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -121,4 +148,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-``` 

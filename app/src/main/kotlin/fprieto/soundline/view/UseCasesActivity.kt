@@ -237,8 +237,7 @@ fun UseCaseCard(useCase: UseCase) {
                     .padding(vertical = 12.dp),
                 height = 80.dp,
                 waveFirstSrc = useCase.drawableRes,
-                waveSecondSrc = useCase.invertedDrawableRes,
-                autoInit = true
+                waveSecondSrc = useCase.invertedDrawableRes
             )
 
             Column(
