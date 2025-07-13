@@ -6,6 +6,9 @@ compileSdk = "34"
 minSdk = "21"
 targetSdk = "34"
 
+# git-version
+git = "3.0.0"
+
 # Compose
 composeBom = "2023.10.01"
 composeCompiler = "1.5.3"
@@ -121,3 +124,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" } 
+git-version = { id = "com.palantir.git-version", version.ref = "git" } 
