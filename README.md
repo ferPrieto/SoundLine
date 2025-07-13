@@ -6,7 +6,7 @@ By using two different `HorizontalScrollViews`, the effect looks pretty similar 
 
 <p align="center">
     <video width="320" height="640" controls>
-        <source src="art/SoundLine-demo.mp4" type="video/mp4">
+        <source src="art/SoundLine-demo" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </p>
