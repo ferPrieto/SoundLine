@@ -4,7 +4,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <prieto.fernando.soundline.ObservableScrollView
+    <fprieto.soundline.ObservableScrollView
             android:id="@+id/scroll_left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,9 +18,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:src="@drawable/soundwave_first_default_0" />
-    </prieto.fernando.soundline.ObservableScrollView>
+    </fprieto.soundline.ObservableScrollView>
 
-    <prieto.fernando.soundline.ObservableScrollView
+    <fprieto.soundline.ObservableScrollView
             android:id="@+id/scroll_right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/soundwave_second_default_0" />
-    </prieto.fernando.soundline.ObservableScrollView>
+    </fprieto.soundline.ObservableScrollView>
     <View
             android:id="@+id/half_view"
             android:layout_width="2dp"
