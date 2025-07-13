@@ -96,7 +96,7 @@ afterEvaluate {
                 pom {
                     name = 'AudioWaveformView'
                     description = 'A custom Android view that displays audio waveforms with scrollable timeline interface similar to SoundCloud'
-                    url = 'https://github.com/fprieto/AudioWaveformView'
+                    url = 'https://github.com/fprieto/SoundLine'
                     
                     licenses {
                         license {
@@ -114,10 +114,21 @@ afterEvaluate {
                     }
                     
                     scm {
-                        connection = 'scm:git:github.com/fprieto/AudioWaveformView.git'
-                        developerConnection = 'scm:git:ssh://github.com/fprieto/AudioWaveformView.git'
-                        url = 'https://github.com/fprieto/AudioWaveformView/tree/master'
+                        connection = 'scm:git:github.com/fprieto/SoundLine.git'
+                        developerConnection = 'scm:git:ssh://github.com/fprieto/SoundLine.git'
+                        url = 'https://github.com/fprieto/SoundLine/tree/master'
                     }
+                }
+            }
+        }
+        
+        repositories {
+            maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/fprieto/SoundLine")
+                credentials {
+                    username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                    password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
                 }
             }
         }
