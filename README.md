@@ -1,158 +1,56 @@
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SoundLine-green.svg?style=flat )]( https://android-arsenal.com/details/1/8033 )
-# AudioWaveformView
+# TimelineView
 
-AudioWaveformView is an Android custom view which similarly works as the `SoundCloud` track time line.
-By using two different `HorizontalScrollViews`, the effect looks pretty similar and it's possible to customize the image resource used for the waves.
+A synchronized dual-view timeline visualization component for Android with native Compose support.
 
-<p align="center">
-    <img src="art/SoundLine-demo.gif" alt="AudioWaveformView Demo" width="320"/>
-</p>
+## Overview
 
-## Getting Started
+TimelineView provides a synchronized scrolling experience with two content views that move in complementary directions. Originally designed for audio waveform visualization, it's now a versatile component perfect for any timeline-based application.
 
-Add the **audiowaveformview** library to your project using one of the following methods:
+## Features
 
-### JitPack (Recommended)
+- **Native Compose Implementation**: Pure Compose implementation without XML dependencies
+- **Synchronized Scrolling**: Perfect offset synchronization between past and future content
+- **Customizable Offset**: Configure the scroll offset as a fraction of screen width
+- **Material 3 Support**: Built-in Material 3 styling variants
+- **Flexible Content**: Support for any drawable resources as timeline content
+- **Modern Architecture**: Uses Compose's declarative UI paradigm
 
-Add the JitPack repository to your root `build.gradle` file:
+## Use Cases
 
-```gradle
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
+- **Audio/Video Editing**: Show played vs remaining content
+- **Progress Visualization**: Display progress in long-running tasks
+- **Data Timeline**: Visualize historical vs future data points  
+- **Reading Progress**: Track reading progress in documents
+- **Media Players**: Timeline scrubbing for audio/video
+- **Data Processing**: Show processed vs pending data
 
-Add the dependency to your app's `build.gradle` file:
+## Quick Start
 
-```gradle
-dependencies {
-    implementation 'com.github.fprieto:SoundLine:latest-version'
-}
-```
-
-### GitHub Packages
-
-Add the GitHub Packages repository to your root `build.gradle` file:
-
-```gradle
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url = uri("https://maven.pkg.github.com/fprieto/SoundLine")
-            credentials {
-                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
-            }
-        }
-    }
-}
-```
-
-Add the dependency:
-
-```gradle
-dependencies {
-    implementation 'com.github.fprieto.audiowaveformview:audiowaveformview:latest-version'
-}
-```
-
-### Maven Local (Development)
-
-For local development, you can publish to your local Maven repository:
-
-```bash
-./gradlew publishToMavenLocal
-```
-
-Then add the dependency:
-
-```gradle
-dependencies {
-    implementation 'com.github.fprieto.audiowaveformview:audiowaveformview:1.0.0'
-}
-```
-
-## Usage
-
-In your layout add **fprieto.soundline.SoundLineView** and you can specify the drawable resources ```app:wave_first_src``` and ```app:wave_second_src``` (optional).
-
-### XML Layout
-
-```xml
-<fprieto.soundline.SoundLineView
-    android:id="@+id/soundLineView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:wave_first_src="@drawable/custom_first_default_0"
-    app:wave_second_src="@drawable/custom_second_default_0" />
-```
-
-### Kotlin Code
-
-#### Traditional View-based approach
 ```kotlin
-import fprieto.soundline.SoundLineView
-
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        
-        val soundLineView = findViewById<SoundLineView>(R.id.soundLineView)
-        soundLineView.initWaves()
-    }
-}
-```
-
-#### Jetpack Compose approach
-```kotlin
-import androidx.compose.ui.unit.dp
-import fprieto.soundline.AudioWaveformView
-
 @Composable
-fun AudioWaveformScreen() {
-    Column {
-        // Default waveform
-        AudioWaveformView(
-            modifier = Modifier.fillMaxWidth(),
-            height = 120.dp,
-            autoInit = true
-        )
-        
-        // Custom waveform
-        AudioWaveformView(
-            modifier = Modifier.fillMaxWidth(),
-            height = 120.dp,
-            waveFirstSrc = R.drawable.custom_first_default_0,
-            waveSecondSrc = R.drawable.custom_second_default_0,
-            autoInit = true
-        )
-    }
+fun MyScreen() {
+    TimelineView(
+        height = 120.dp,
+        pastContent = R.drawable.my_past_content,
+        futureContent = R.drawable.my_future_content
+    )
 }
 ```
 
-- By default, there are 3 different sound waves to use (with three different lengths):
-*soundwave_first_default_0.png
-soundwave_first_default_1.png
-soundwave_first_default_2.png*
+## Demo
 
-- Also 3 default sound waves for the non complete track:
-*soundwave_second_default_0.png
-soundwave_second_default_1.png
-soundwave_second_default_2.png*
+![TimelineView Demo](art/SoundLine.gif)
 
-## Sample
+## Structure
 
-There is a sample in the project where the sound waves are set *custom_first_default_0* and *custom_second_default_0*
+- **`audiowaveformview/`**: Core TimelineView library module
+- **`app/`**: Demo application showcasing various use cases
 
+## Documentation
 
-#  License
+For detailed API documentation, see [audiowaveformview/README.md](audiowaveformview/README.md)
+
+## License
 
 Copyright 2025 Fernando Prieto Moyano
 

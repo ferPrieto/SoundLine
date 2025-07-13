@@ -41,7 +41,7 @@ android {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
-    namespace = "com.github.fprieto.audiowaveformview"
+    namespace = "com.github.ferprieto.timelineview"
     
      publishing {
         singleVariant("release") {
@@ -109,7 +109,7 @@ afterEvaluate {
 
                     developers {
                         developer {
-                            id.set("fprieto")
+                            id.set("ferprieto")
                             name.set("Fernando Prieto")
                             email.set("f.prieto.moyano@gmail.com")
                         }

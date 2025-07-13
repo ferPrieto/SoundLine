@@ -1,4 +1,4 @@
-package fprieto.soundline
+package ferprieto.timelineview
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -6,35 +6,35 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.github.fprieto.audiowaveformview.R
+import com.github.ferprieto.timelineview.R
 
 /**
- * Modern Compose-native AudioWaveformView
- * Uses the new ComposeSoundLineView implementation without XML dependencies
+ * Modern Compose-native TimelineView
+ * Uses the new ComposeTimelineView implementation without XML dependencies
  * 
  * @param modifier The modifier to be applied to the view
- * @param height The height of the waveform view
- * @param waveFirstSrc Resource ID for the first wave drawable (optional)
- * @param waveSecondSrc Resource ID for the second wave drawable (optional)
+ * @param height The height of the timeline view
+ * @param pastContent Resource ID for the past content drawable (optional)
+ * @param futureContent Resource ID for the future content drawable (optional)
  * @param offsetFraction Scroll offset as fraction of screen width (default: 1/12)
  * @param dividerWidth Width of the center divider
  * @param dividerColor Color of the center divider
  */
 @Composable
-fun AudioWaveformView(
+fun TimelineView(
     modifier: Modifier = Modifier,
     height: Dp = 200.dp,
-    waveFirstSrc: Int? = null,
-    waveSecondSrc: Int? = null,
+    pastContent: Int? = null,
+    futureContent: Int? = null,
     offsetFraction: Float = 1f/12f,
     dividerWidth: Dp = 2.dp,
     dividerColor: Color = Color.Transparent
 ) {
-    ComposeSoundLineViewAdvanced(
+    ComposeTimelineViewAdvanced(
         modifier = modifier.fillMaxWidth(),
         height = height,
-        waveFirstSrc = waveFirstSrc ?: R.drawable.soundwave_first_default_0,
-        waveSecondSrc = waveSecondSrc ?: R.drawable.soundwave_second_default_0,
+        pastContent = pastContent ?: R.drawable.soundwave_first_default_0,
+        futureContent = futureContent ?: R.drawable.soundwave_second_default_0,
         offsetFraction = offsetFraction,
         dividerWidth = dividerWidth,
         dividerColor = dividerColor
@@ -42,47 +42,47 @@ fun AudioWaveformView(
 }
 
 /**
- * Simplified AudioWaveformView with basic configuration
+ * Simplified TimelineView with basic configuration
  * Perfect for most use cases
  */
 @Composable
-fun AudioWaveformViewSimple(
+fun TimelineViewSimple(
     modifier: Modifier = Modifier,
     height: Dp = 120.dp,
-    waveFirstSrc: Int? = null,
-    waveSecondSrc: Int? = null
+    pastContent: Int? = null,
+    futureContent: Int? = null
 ) {
-    ComposeSoundLineView(
+    ComposeTimelineView(
         modifier = modifier.fillMaxWidth(),
         height = height,
-        waveFirstSrc = waveFirstSrc ?: R.drawable.soundwave_first_default_0,
-        waveSecondSrc = waveSecondSrc ?: R.drawable.soundwave_second_default_0
+        pastContent = pastContent ?: R.drawable.soundwave_first_default_0,
+        futureContent = futureContent ?: R.drawable.soundwave_second_default_0
     )
 }
 
 /**
- * Material 3 styled AudioWaveformView
+ * Material 3 styled TimelineView
  * Uses the modern Compose implementation with Material 3 design principles
  * 
  * @param modifier The modifier to be applied to the view
- * @param height The height of the waveform view
- * @param waveFirstSrc Resource ID for the first wave drawable (optional)
- * @param waveSecondSrc Resource ID for the second wave drawable (optional)
+ * @param height The height of the timeline view
+ * @param pastContent Resource ID for the past content drawable (optional)
+ * @param futureContent Resource ID for the future content drawable (optional)
  * @param offsetFraction Scroll offset as fraction of screen width
  */
 @Composable
-fun AudioWaveformViewMaterial3(
+fun TimelineViewMaterial3(
     modifier: Modifier = Modifier,
     height: Dp = 200.dp,
-    waveFirstSrc: Int? = null,
-    waveSecondSrc: Int? = null,
+    pastContent: Int? = null,
+    futureContent: Int? = null,
     offsetFraction: Float = 1f/12f
 ) {
-    AudioWaveformView(
+    TimelineView(
         modifier = modifier,
         height = height,
-        waveFirstSrc = waveFirstSrc,
-        waveSecondSrc = waveSecondSrc,
+        pastContent = pastContent,
+        futureContent = futureContent,
         offsetFraction = offsetFraction,
         dividerWidth = 1.dp,
         dividerColor = Color.Transparent

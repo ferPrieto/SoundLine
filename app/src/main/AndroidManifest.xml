@@ -9,7 +9,7 @@
             android:theme="@style/AppTheme">
 
         <activity
-                android:name=".view.ComposeMainActivity"
+                android:name="ferprieto.timelineview.view.MainActivity"
                 android:screenOrientation="portrait"
                 android:exported="true"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -22,7 +22,7 @@
         </activity>
 
         <activity
-                android:name=".view.UseCasesActivity"
+                android:name="ferprieto.timelineview.view.UseCasesActivity"
                 android:screenOrientation="portrait"
                 android:exported="true"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">

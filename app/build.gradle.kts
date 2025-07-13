@@ -8,7 +8,7 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
     
     defaultConfig {
-        applicationId = "ffprieto.soundline"
+        applicationId = "ferprieto.timelineview"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 1
@@ -48,7 +48,7 @@ android {
         warningsAsErrors = false
     }
     
-    namespace = "fprieto.soundline"
+    namespace = "ferprieto.timelineview"
 }
 
 dependencies {
