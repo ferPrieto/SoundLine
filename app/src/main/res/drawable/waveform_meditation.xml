@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="80dp"
+    android:viewportWidth="320"
+    android:viewportHeight="80">
+    
+    <!-- Background gradient effect -->
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M0,0 L320,0 L320,80 L0,80 Z"/>
+    
+    <!-- Soft, rounded waveform - Low energy (calm) -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M10,40 C10,38 11,38 12,38 C13,38 14,38 14,40 C14,42 13,42 12,42 C11,42 10,42 10,40 Z"/>
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M15,40 C15,36 16,36 17,36 C18,36 19,36 19,40 C19,44 18,44 17,44 C16,44 15,44 15,40 Z"/>
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M20,40 C20,37 21,37 22,37 C23,37 24,37 24,40 C24,43 23,43 22,43 C21,43 20,43 20,40 Z"/>
+    
+    <!-- Medium energy -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M30,40 C30,32 31,32 32,32 C33,32 34,32 34,40 C34,48 33,48 32,48 C31,48 30,48 30,40 Z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M35,40 C35,28 36,28 37,28 C38,28 39,28 39,40 C39,52 38,52 37,52 C36,52 35,52 35,40 Z"/>
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M40,40 C40,30 41,30 42,30 C43,30 44,30 44,40 C44,50 43,50 42,50 C41,50 40,50 40,40 Z"/>
+    
+    <!-- High energy (more intense) -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M50,40 C50,20 51,20 52,20 C53,20 54,20 54,40 C54,60 53,60 52,60 C51,60 50,60 50,40 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M55,40 C55,15 56,15 57,15 C58,15 59,15 59,40 C59,65 58,65 57,65 C56,65 55,65 55,40 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M60,40 C60,25 61,25 62,25 C63,25 64,25 64,40 C64,55 63,55 62,55 C61,55 60,55 60,40 Z"/>
+    
+    <!-- Back to calm -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M70,40 C70,35 71,35 72,35 C73,35 74,35 74,40 C74,45 73,45 72,45 C71,45 70,45 70,40 Z"/>
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M75,40 C75,38 76,38 77,38 C78,38 79,38 79,40 C79,42 78,42 77,42 C76,42 75,42 75,40 Z"/>
+    
+    <!-- Energy flow indicator -->
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M100,5 L300,5 L300,15 L100,15 Z"/>
+    
+    <!-- Breathing guide markers -->
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M80,0 L85,0 L85,10 L80,10 Z"/>
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M160,0 L165,0 L165,10 L160,10 Z"/>
+    <path
+        android:fillColor="#C8E6C9"
+        android:pathData="M240,0 L245,0 L245,10 L240,10 Z"/>
+    
+    <!-- Loop selection area -->
+    <path
+        android:fillColor="#4CAF50"
+        android:fillAlpha="0.3"
+        android:pathData="M120,70 L200,70 L200,80 L120,80 Z"/>
+    
+    <!-- Playback position -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M56,0 L58,0 L58,80 L56,80 Z"/>
+</vector> 

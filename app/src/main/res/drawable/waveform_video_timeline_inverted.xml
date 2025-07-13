@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="100dp"
+    android:viewportWidth="320"
+    android:viewportHeight="100">
+    
+    <!-- Background (inverted to white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0 L320,0 L320,100 L0,100 Z"/>
+    
+    <!-- Video thumbnails (darker/complementary colors) -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M10,10 L60,10 L60,40 L10,40 Z"/>
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M65,10 L115,10 L115,40 L65,40 Z"/>
+    <path
+        android:fillColor="#E65100"
+        android:pathData="M120,10 L170,10 L170,40 L120,40 Z"/>
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M175,10 L225,10 L225,40 L175,40 Z"/>
+    <path
+        android:fillColor="#4A148C"
+        android:pathData="M230,10 L280,10 L280,40 L230,40 Z"/>
+    
+    <!-- Waveform below (inverted to black) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M10,60 L10,55 L12,55 L12,60 L12,65 L10,65 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M15,60 L15,50 L17,50 L17,60 L17,70 L15,70 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,60 L20,45 L22,45 L22,60 L22,75 L20,75 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M25,60 L25,52 L27,52 L27,60 L27,68 L25,68 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M30,60 L30,58 L32,58 L32,60 L32,62 L30,62 Z"/>
+    
+    <!-- Continue waveform pattern -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M35,60 L35,48 L37,48 L37,60 L37,72 L35,72 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M40,60 L40,42 L42,42 L42,60 L42,78 L40,78 Z"/>
+    <path
+        android:fillColor="#000000"
+        android:pathData="M45,60 L45,54 L47,54 L47,60 L47,66 L45,66 Z"/>
+    
+    <!-- Playhead (blue for contrast) -->
+    <path
+        android:fillColor="#0000FF"
+        android:pathData="M70,5 L72,5 L72,85 L70,85 Z"/>
+    
+    <!-- Time markers (purple for contrast) -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M10,45 L60,45 L60,47 L10,47 Z"/>
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M65,45 L115,45 L115,47 L65,47 Z"/>
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M120,45 L170,45 L170,47 L120,47 Z"/>
+    
+    <!-- Transition effects indicators (magenta for contrast) -->
+    <path
+        android:fillColor="#FF00FF"
+        android:pathData="M58,10 L67,10 L67,40 L58,40 Z"/>
+    <path
+        android:fillColor="#FF00FF"
+        android:pathData="M113,10 L122,10 L122,40 L113,40 Z"/>
+</vector> 

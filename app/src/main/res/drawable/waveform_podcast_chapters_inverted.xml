@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="80dp"
+    android:viewportWidth="320"
+    android:viewportHeight="80">
+    
+    <!-- Background (inverted to white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0 L320,0 L320,80 L0,80 Z"/>
+    
+    <!-- Waveform segments (inverted to orange) -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M10,40 L10,25 L12,25 L12,40 L12,55 L10,55 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M15,40 L15,15 L17,15 L17,40 L17,65 L15,65 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M20,40 L20,30 L22,30 L22,40 L22,50 L20,50 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M25,40 L25,20 L27,20 L27,40 L27,60 L25,60 Z"/>
+    
+    <!-- Chapter marker line (darker gold) -->
+    <path
+        android:fillColor="#B8860B"
+        android:pathData="M80,10 L82,10 L82,70 L80,70 Z"/>
+    
+    <!-- Second segment -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M85,40 L85,35 L87,35 L87,40 L87,45 L85,45 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M90,40 L90,25 L92,25 L92,40 L92,55 L90,55 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M95,40 L95,30 L97,30 L97,40 L97,50 L95,50 Z"/>
+    
+    <!-- Chapter marker line -->
+    <path
+        android:fillColor="#B8860B"
+        android:pathData="M160,10 L162,10 L162,70 L160,70 Z"/>
+    
+    <!-- Third segment -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M165,40 L165,20 L167,20 L167,40 L167,60 L165,60 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M170,40 L170,25 L172,25 L172,40 L172,55 L170,55 Z"/>
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M175,40 L175,35 L177,35 L177,40 L177,45 L175,45 Z"/>
+    
+    <!-- Chapter labels (lighter gray) -->
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M30,5 L70,5 L70,15 L30,15 Z"/>
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M100,5 L140,5 L140,15 L100,15 Z"/>
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M180,5 L220,5 L220,15 L180,15 Z"/>
+</vector> 

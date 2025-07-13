@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="80dp"
+    android:viewportWidth="320"
+    android:viewportHeight="80">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M0,0 L320,0 L320,80 L0,80 Z"/>
+    
+    <!-- Smooth waveform -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M10,40 L10,38 L12,38 L12,40 L12,42 L10,42 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M15,40 L15,35 L17,35 L17,40 L17,45 L15,45 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M20,40 L20,32 L22,32 L22,40 L22,48 L20,48 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M25,40 L25,30 L27,30 L27,40 L27,50 L25,50 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M30,40 L30,28 L32,28 L32,40 L32,52 L30,52 Z"/>
+    
+    <!-- Text sync highlights -->
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M35,40 L35,25 L37,25 L37,40 L37,55 L35,55 Z"/>
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M40,40 L40,20 L42,20 L42,40 L42,60 L40,60 Z"/>
+    <path
+        android:fillColor="#FFB74D"
+        android:pathData="M45,40 L45,22 L47,22 L47,40 L47,58 L45,58 Z"/>
+    
+    <!-- Continue normal waveform -->
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M50,40 L50,36 L52,36 L52,40 L52,44 L50,44 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M55,40 L55,34 L57,34 L57,40 L57,46 L55,46 Z"/>
+    <path
+        android:fillColor="#5D4037"
+        android:pathData="M60,40 L60,38 L62,38 L62,40 L62,42 L60,42 Z"/>
+    
+    <!-- Word boundaries -->
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M30,60 L50,60 L50,65 L30,65 Z"/>
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M55,60 L80,60 L80,65 L55,65 Z"/>
+    <path
+        android:fillColor="#8D6E63"
+        android:pathData="M85,60 L110,60 L110,65 L85,65 Z"/>
+    
+    <!-- Chapter markers -->
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M100,10 L102,10 L102,70 L100,70 Z"/>
+    <path
+        android:fillColor="#3E2723"
+        android:pathData="M200,10 L202,10 L202,70 L200,70 Z"/>
+    
+    <!-- Reading progress -->
+    <path
+        android:fillColor="#FF6F00"
+        android:pathData="M41,5 L43,5 L43,75 L41,75 Z"/>
+    
+    <!-- Bookmark indicators -->
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M150,0 L158,0 L154,8 L150,0 Z"/>
+    <path
+        android:fillColor="#FF4081"
+        android:pathData="M250,0 L258,0 L254,8 L250,0 Z"/>
+</vector> 
