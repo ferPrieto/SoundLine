@@ -91,14 +91,14 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 from(components["release"])
 
-                groupId = "com.github.fprieto"
+                groupId = "com.github.ferPrieto"
                 artifactId = "audiowaveformview"
                 version = gitVersion().removePrefix("v").removeSuffix(".dirty")
 
                 pom {
                     name.set("AudioWaveformView")
                     description.set("A custom Android view that displays audio waveforms with scrollable timeline interface similar to SoundCloud")
-                    url.set("https://github.com/fprieto/SoundLine")
+                    url.set("https://github.com/ferPrieto/SoundLine")
 
                     licenses {
                         license {
@@ -116,9 +116,9 @@ afterEvaluate {
                     }
 
                     scm {
-                        connection.set("scm:git:github.com/fprieto/SoundLine.git")
-                        developerConnection.set("scm:git:ssh://github.com/fprieto/SoundLine.git")
-                        url.set("https://github.com/fprieto/SoundLine/tree/master")
+                        connection.set("scm:git:github.com/ferPrieto/SoundLine.git")
+                        developerConnection.set("scm:git:ssh://github.com/ferPrieto/SoundLine.git")
+                        url.set("https://github.com/ferPrieto/SoundLine/tree/master")
                     }
                 }
             }
@@ -127,11 +127,10 @@ afterEvaluate {
         repositories {
             maven {
                 name = "GitHubPackages"
-                url = uri("https://maven.pkg.github.com/fprieto/SoundLine")
+                url = uri("https://maven.pkg.github.com/ferPrieto/SoundLine")
                 credentials {
-                    username =
-                        project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                    username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME") ?: System.getenv("GITHUB_ACTOR")
+                    password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN") ?: System.getenv("GITHUB_TOKEN")
                 }
             }
         }
