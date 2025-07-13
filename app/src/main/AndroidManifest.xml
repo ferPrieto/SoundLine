@@ -8,7 +8,6 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
 
-        <!-- Compose-based MainActivity (default launcher) -->
         <activity
                 android:name=".view.ComposeMainActivity"
                 android:screenOrientation="portrait"

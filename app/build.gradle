@@ -8,7 +8,7 @@ android {
     compileSdk 34
     
     defaultConfig {
-        applicationId "prieto.fernando.soundline"
+        applicationId "ffprieto.soundline"
         minSdk 21
         targetSdk 34
         versionCode 1
@@ -48,7 +48,7 @@ android {
         warningsAsErrors false
     }
     
-    namespace 'prieto.fernando.soundline'
+    namespace 'fprieto.soundline'
 }
 
 dependencies {
@@ -73,6 +73,25 @@ dependencies {
     // Optional: For debugging compose layouts
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    // Testing dependencies
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'androidx.test.ext:junit:1.1.5'
+    testImplementation 'androidx.test:core:1.5.0'
+    testImplementation 'androidx.test:rules:1.5.0'
+    testImplementation 'androidx.test:runner:1.5.2'
+    testImplementation 'org.robolectric:robolectric:4.10.3'
+    
+    // UI Testing dependencies
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    
+    // Compose Testing
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation 'androidx.compose.ui:ui-test-manifest'
 
     implementation project(path: ':audiowaveformview')
 }

@@ -5,7 +5,7 @@ AudioWaveformView is an Android custom view which similarly works as the `SoundC
 By using two different `HorizontalScrollViews`, the effect looks pretty similar and it's possible to customize the image resource used for the waves.
 
 <p align="center">
-    <img src="art/SoundLine.gif"/>
+    <img src="art/SoundLine-demo.gif" alt="AudioWaveformView Demo" width="320"/>
 </p>
 
 ## Getting Started
@@ -80,12 +80,12 @@ dependencies {
 
 ## Usage
 
-In your layout add **prieto.fernando.soundline.SoundLineView** and you can specify the drawable resources ```app:wave_first_src``` and ```app:wave_second_src``` (optional).
+In your layout add **fprieto.soundline.SoundLineView** and you can specify the drawable resources ```app:wave_first_src``` and ```app:wave_second_src``` (optional).
 
 ### XML Layout
 
 ```xml
-<prieto.fernando.soundline.SoundLineView
+<fprieto.soundline.SoundLineView
     android:id="@+id/soundLineView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -97,7 +97,7 @@ In your layout add **prieto.fernando.soundline.SoundLineView** and you can speci
 
 #### Traditional View-based approach
 ```kotlin
-import prieto.fernando.soundline.SoundLineView
+import fprieto.soundline.SoundLineView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,7 +113,7 @@ class MainActivity : AppCompatActivity() {
 #### Jetpack Compose approach
 ```kotlin
 import androidx.compose.ui.unit.dp
-import prieto.fernando.soundline.AudioWaveformView
+import fprieto.soundline.AudioWaveformView
 
 @Composable
 fun AudioWaveformScreen() {
