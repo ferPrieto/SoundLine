@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="120dp"
+    android:viewportWidth="320"
+    android:viewportHeight="120">
+    
+    <!-- Background (inverted to light gray) -->
+    <path
+        android:fillColor="#E5E5E5"
+        android:pathData="M0,0 L320,0 L320,120 L0,120 Z"/>
+    
+    <!-- Track 1 (upper) - inverted to dark orange -->
+    <path
+        android:fillColor="#B8471F"
+        android:pathData="M10,30 L10,20 L12,20 L12,30 L12,40 L10,40 Z"/>
+    <path
+        android:fillColor="#B8471F"
+        android:pathData="M15,30 L15,10 L17,10 L17,30 L17,50 L15,50 Z"/>
+    <path
+        android:fillColor="#B8471F"
+        android:pathData="M20,30 L20,25 L22,25 L22,30 L22,35 L20,35 Z"/>
+    <path
+        android:fillColor="#B8471F"
+        android:pathData="M25,30 L25,15 L27,15 L27,30 L27,45 L25,45 Z"/>
+    <path
+        android:fillColor="#B8471F"
+        android:pathData="M30,30 L30,5 L32,5 L32,30 L32,55 L30,55 Z"/>
+    
+    <!-- Beat marker for Track 1 (purple for contrast) -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M80,0 L82,0 L82,60 L80,60 Z"/>
+    
+    <!-- Track 2 (lower) - inverted to dark cyan -->
+    <path
+        android:fillColor="#006064"
+        android:pathData="M10,90 L10,80 L12,80 L12,90 L12,100 L10,100 Z"/>
+    <path
+        android:fillColor="#006064"
+        android:pathData="M15,90 L15,70 L17,70 L17,90 L17,110 L15,110 Z"/>
+    <path
+        android:fillColor="#006064"
+        android:pathData="M20,90 L20,85 L22,85 L22,90 L22,95 L20,95 Z"/>
+    <path
+        android:fillColor="#006064"
+        android:pathData="M25,90 L25,75 L27,75 L27,90 L27,105 L25,105 Z"/>
+    <path
+        android:fillColor="#006064"
+        android:pathData="M30,90 L30,65 L32,65 L32,90 L32,115 L30,115 Z"/>
+    
+    <!-- Beat marker for Track 2 -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M82,60 L84,60 L84,120 L82,120 Z"/>
+    
+    <!-- Sync indicators (red for contrast) -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M81,58 L83,58 L83,62 L81,62 Z"/>
+    
+    <!-- BPM indicators (dark gray) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M150,30 L150,20 L152,20 L152,30 L152,40 L150,40 Z"/>
+    <path
+        android:fillColor="#333333"
+        android:pathData="M150,90 L150,80 L152,80 L152,90 L152,100 L150,100 Z"/>
+    
+    <!-- Track labels background (light gray) -->
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M250,10 L310,10 L310,25 L250,25 Z"/>
+    <path
+        android:fillColor="#CCCCCC"
+        android:pathData="M250,95 L310,95 L310,110 L250,110 Z"/>
+</vector> 

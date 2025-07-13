@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="100dp"
+    android:viewportWidth="320"
+    android:viewportHeight="100">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#F5F5F5"
+        android:pathData="M0,0 L320,0 L320,100 L0,100 Z"/>
+    
+    <!-- Grid lines -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,20 L320,20 L320,22 L0,22 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,40 L320,40 L320,42 L0,42 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,60 L320,60 L320,62 L0,62 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,80 L320,80 L320,82 L0,82 Z"/>
+    
+    <!-- Vertical grid -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M80,0 L82,0 L82,100 L80,100 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M160,0 L162,0 L162,100 L160,100 Z"/>
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M240,0 L242,0 L242,100 L240,100 Z"/>
+    
+    <!-- Data trend waveform -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M10,50 L10,48 L12,48 L12,50 L12,52 L10,52 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M15,50 L15,45 L17,45 L17,50 L17,55 L15,55 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M20,50 L20,40 L22,40 L22,50 L22,60 L20,60 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M25,50 L25,35 L27,35 L27,50 L27,65 L25,65 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M30,50 L30,30 L32,30 L32,50 L32,70 L30,70 Z"/>
+    
+    <!-- Peak indicator -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M35,50 L35,15 L37,15 L37,50 L37,85 L35,85 Z"/>
+    
+    <!-- Continue trend -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M40,50 L40,25 L42,25 L42,50 L42,75 L40,75 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M45,50 L45,35 L47,35 L47,50 L47,65 L45,65 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M50,50 L50,42 L52,42 L52,50 L52,58 L50,58 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M55,50 L55,46 L57,46 L57,50 L57,54 L55,54 Z"/>
+    
+    <!-- Anomaly detection -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M60,50 L60,20 L62,20 L62,50 L62,80 L60,80 Z"/>
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M65,50 L65,25 L67,25 L67,50 L67,75 L65,75 Z"/>
+    
+    <!-- Data labels (simplified as rectangles) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M10,5 L40,5 L40,15 L10,15 Z"/>
+    <path
+        android:fillColor="#333333"
+        android:pathData="M100,5 L140,5 L140,15 L100,15 Z"/>
+    <path
+        android:fillColor="#333333"
+        android:pathData="M200,5 L240,5 L240,15 L200,15 Z"/>
+    
+    <!-- Value indicators -->
+    <path
+        android:fillColor="#666666"
+        android:pathData="M5,20 L15,20 L15,25 L5,25 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M5,40 L15,40 L15,45 L5,45 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M5,60 L15,60 L15,65 L5,65 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M5,80 L15,80 L15,85 L5,85 Z"/>
+    
+    <!-- Trend line -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M10,55 L70,45 L72,45 L72,47 L10,57 Z"/>
+    
+    <!-- Current position -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M36,0 L38,0 L38,100 L36,100 Z"/>
+</vector> 

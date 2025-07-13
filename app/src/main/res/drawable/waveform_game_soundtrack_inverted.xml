@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="140dp"
+    android:viewportWidth="320"
+    android:viewportHeight="140">
+    
+    <!-- Background (inverted to light blue) -->
+    <path
+        android:fillColor="#F2F6FF"
+        android:pathData="M0,0 L320,0 L320,140 L0,140 Z"/>
+    
+    <!-- Gunshot sound (inverted to light red) -->
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M10,30 L10,28 L12,28 L12,30 L12,32 L10,32 Z"/>
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M15,30 L15,10 L17,10 L17,30 L17,50 L15,50 Z"/>
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M20,30 L20,5 L22,5 L22,30 L22,55 L20,55 Z"/>
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M25,30 L25,15 L27,15 L27,30 L27,45 L25,45 Z"/>
+    <path
+        android:fillColor="#FFCDD2"
+        android:pathData="M30,30 L30,28 L32,28 L32,30 L32,32 L30,32 Z"/>
+    
+    <!-- Footsteps (inverted to dark green) -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M50,70 L50,65 L52,65 L52,70 L52,75 L50,75 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M55,70 L55,68 L57,68 L57,70 L57,72 L55,72 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M60,70 L60,65 L62,65 L62,70 L62,75 L60,75 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M65,70 L65,68 L67,68 L67,70 L67,72 L65,72 Z"/>
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M70,70 L70,65 L72,65 L72,70 L72,75 L70,75 Z"/>
+    
+    <!-- Ambient music (inverted to dark blue) -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M90,110 L90,105 L92,105 L92,110 L92,115 L90,115 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M95,110 L95,100 L97,100 L97,110 L97,120 L95,120 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M100,110 L100,95 L102,95 L102,110 L102,125 L100,125 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M105,110 L105,98 L107,98 L107,110 L107,122 L105,122 Z"/>
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M110,110 L110,102 L112,102 L112,110 L112,118 L110,118 Z"/>
+    
+    <!-- Explosion (inverted to light orange) -->
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M140,30 L140,25 L142,25 L142,30 L142,35 L140,35 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M145,30 L145,15 L147,15 L147,30 L147,45 L145,45 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M150,30 L150,5 L152,5 L152,30 L152,55 L150,55 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M155,30 L155,0 L157,0 L157,30 L157,60 L155,60 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M160,30 L160,5 L162,5 L162,30 L162,55 L160,55 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M165,30 L165,15 L167,15 L167,30 L167,45 L165,45 Z"/>
+    <path
+        android:fillColor="#FFCC80"
+        android:pathData="M170,30 L170,25 L172,25 L172,30 L172,35 L170,35 Z"/>
+    
+    <!-- Power-up sound (inverted to dark magenta) -->
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M190,70 L190,68 L192,68 L192,70 L192,72 L190,72 Z"/>
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M195,70 L195,65 L197,65 L197,70 L197,75 L195,75 Z"/>
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M200,70 L200,60 L202,60 L202,70 L202,80 L200,80 Z"/>
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M205,70 L205,55 L207,55 L207,70 L207,85 L205,85 Z"/>
+    <path
+        android:fillColor="#AD1457"
+        android:pathData="M210,70 L210,50 L212,50 L212,70 L212,90 L210,90 Z"/>
+    
+    <!-- UI click sounds (inverted to dark yellow) -->
+    <path
+        android:fillColor="#F57F17"
+        android:pathData="M230,110 L230,108 L232,108 L232,110 L232,112 L230,112 Z"/>
+    <path
+        android:fillColor="#F57F17"
+        android:pathData="M235,110 L235,109 L237,109 L237,110 L237,111 L235,111 Z"/>
+    <path
+        android:fillColor="#F57F17"
+        android:pathData="M240,110 L240,108 L242,108 L242,110 L242,112 L240,112 Z"/>
+    <path
+        android:fillColor="#F57F17"
+        android:pathData="M245,110 L245,109 L247,109 L247,110 L247,111 L245,111 Z"/>
+    
+    <!-- Category labels (dark gray) -->
+    <path
+        android:fillColor="#666666"
+        android:pathData="M10,5 L40,5 L40,15 L10,15 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M50,85 L80,85 L80,95 L50,95 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M90,125 L120,125 L120,135 L90,135 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M140,5 L170,5 L170,15 L140,15 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M190,95 L220,95 L220,105 L190,105 Z"/>
+    <path
+        android:fillColor="#666666"
+        android:pathData="M230,125 L260,125 L260,135 L230,135 Z"/>
+    
+    <!-- Selection indicators (dark cyan) -->
+    <path
+        android:fillColor="#006064"
+        android:pathData="M8,0 L42,0 L42,60 L8,60 Z"
+        android:fillAlpha="0.2"/>
+    
+    <!-- Volume balance indicators (dark gray) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M280,10 L290,10 L290,30 L280,30 Z"/>
+    <path
+        android:fillColor="#333333"
+        android:pathData="M280,50 L285,50 L285,70 L280,70 Z"/>
+    <path
+        android:fillColor="#333333"
+        android:pathData="M280,90 L295,90 L295,110 L280,110 Z"/>
+    
+    <!-- Playback position (dark gray) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M21,0 L23,0 L23,140 L21,140 Z"/>
+</vector> 

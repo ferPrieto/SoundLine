@@ -20,5 +20,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+                android:name=".view.UseCasesActivity"
+                android:screenOrientation="portrait"
+                android:exported="true"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
 </manifest>

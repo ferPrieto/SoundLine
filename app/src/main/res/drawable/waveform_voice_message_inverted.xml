@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="40dp"
+    android:viewportWidth="200"
+    android:viewportHeight="40">
+    
+    <!-- Background (inverted to dark green) -->
+    <path
+        android:fillColor="#1BA146"
+        android:pathData="M0,0 L200,0 L200,40 L0,40 Z"/>
+    
+    <!-- Compact waveform (inverted to light green) -->
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M10,20 L10,18 L12,18 L12,20 L12,22 L10,22 Z"/>
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M15,20 L15,12 L17,12 L17,20 L17,28 L15,28 Z"/>
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M20,20 L20,16 L22,16 L22,20 L22,24 L20,24 Z"/>
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M25,20 L25,8 L27,8 L27,20 L27,32 L25,32 Z"/>
+    
+    <!-- Pause indicator (darker color) -->
+    <path
+        android:fillColor="#25D366"
+        android:pathData="M30,20 L30,19 L32,19 L32,20 L32,21 L30,21 Z"/>
+    <path
+        android:fillColor="#25D366"
+        android:pathData="M35,20 L35,19 L37,19 L37,20 L37,21 L35,21 Z"/>
+    
+    <!-- Loud section (very light green) -->
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M40,20 L40,10 L42,10 L42,20 L42,30 L40,30 Z"/>
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M45,20 L45,14 L47,14 L47,20 L47,26 L45,26 Z"/>
+    <path
+        android:fillColor="#E8F5E8"
+        android:pathData="M50,20 L50,6 L52,6 L52,20 L52,34 L50,34 Z"/>
+    
+    <!-- Continue pattern -->
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M55,20 L55,16 L57,16 L57,20 L57,24 L55,24 Z"/>
+    <path
+        android:fillColor="#A8E6CF"
+        android:pathData="M60,20 L60,18 L62,18 L62,20 L62,22 L60,22 Z"/>
+    
+    <!-- Playback progress indicator (cyan for contrast) -->
+    <path
+        android:fillColor="#00FFFF"
+        android:pathData="M25,4 L27,4 L27,36 L25,36 Z"/>
+</vector> 
