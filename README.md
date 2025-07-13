@@ -5,7 +5,10 @@ AudioWaveformView is an Android custom view which similarly works as the `SoundC
 By using two different `HorizontalScrollViews`, the effect looks pretty similar and it's possible to customize the image resource used for the waves.
 
 <p align="center">
-    <img src="art/SoundLine-demo.mp4"/>
+    <video width="320" height="640" controls>
+        <source src="art/SoundLine-demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </p>
 
 ## Getting Started
