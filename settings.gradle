@@ -1,2 +1,0 @@
-include ':app', ':audiowaveformview'
-rootProject.name='SoundLine'

@@ -1,0 +1,127 @@
+[versions]
+# SDK and Tools
+agp = "8.1.4"
+kotlin = "1.9.10"
+compileSdk = "34"
+minSdk = "21"
+targetSdk = "34"
+
+# git-version
+git = "3.0.0"
+
+# Compose
+composeBom = "2023.10.01"
+composeCompiler = "1.5.3"
+activityCompose = "1.8.2"
+lifecycleViewmodelCompose = "2.7.0"
+
+# AndroidX
+androidxCore = "1.12.0"
+androidxAppcompat = "1.6.1"
+androidxConstraintlayout = "2.1.4"
+
+# Testing
+junit = "4.13.2"
+androidxTestJunit = "1.1.5"
+androidxTestCore = "1.5.0"
+androidxTestRules = "1.5.0"
+androidxTestRunner = "1.5.2"
+espresso = "3.5.1"
+robolectric = "4.10.3"
+
+[libraries]
+# Kotlin
+kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+
+# AndroidX Core
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidxCore" }
+androidx-core = { group = "androidx.core", name = "core", version.ref = "androidxCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidxConstraintlayout" }
+
+# Compose BOM
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+
+# Compose Libraries (versions managed by BOM)
+compose-ui = { group = "androidx.compose.ui", name = "ui" }
+compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+compose-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelCompose" }
+
+# Compose Debug Tools
+compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+
+# Testing - Unit Tests
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxTestJunit" }
+androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidxTestCore" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "androidxTestRules" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }
+robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
+
+# Testing - UI Tests
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-test-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+
+# Compose Testing
+compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+
+[bundles]
+# AndroidX Core Bundle
+androidx-core = [
+    "androidx-core-ktx",
+    "androidx-core", 
+    "androidx-appcompat",
+    "androidx-constraintlayout"
+]
+
+# Compose Bundle (Runtime)
+compose = [
+    "compose-ui",
+    "compose-ui-tooling-preview",
+    "compose-foundation",
+    "compose-material3",
+    "compose-activity",
+    "compose-lifecycle-viewmodel"
+]
+
+# Compose Debug Bundle
+compose-debug = [
+    "compose-ui-tooling",
+    "compose-ui-test-manifest"
+]
+
+# Unit Testing Bundle
+testing-unit = [
+    "junit",
+    "androidx-test-junit",
+    "androidx-test-core",
+    "androidx-test-rules",
+    "androidx-test-runner",
+    "robolectric"
+]
+
+# UI Testing Bundle
+testing-ui = [
+    "androidx-test-junit",
+    "androidx-test-espresso-core",
+    "androidx-test-espresso-contrib",
+    "androidx-test-runner",
+    "androidx-test-rules"
+]
+
+# Compose Testing Bundle
+testing-compose = [
+    "compose-ui-test-junit4",
+    "compose-ui-test-manifest"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" } 
+git-version = { id = "com.palantir.git-version", version.ref = "git" } 
