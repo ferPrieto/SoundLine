@@ -1,4 +1,4 @@
-package fprieto.soundline
+package ferprieto.timelineview
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,18 +15,18 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.github.fprieto.audiowaveformview.R
+import com.github.ferprieto.timelineview.R
 
 /**
- * Native Compose implementation of SoundLineView
- * Replaces the XML-based implementation with a fully Compose-native approach
+ * Native Compose implementation of TimelineView
+ * Provides synchronized scrolling between past and future content
  */
 @Composable
-fun ComposeSoundLineView(
+fun ComposeTimelineView(
     modifier: Modifier = Modifier,
     height: Dp = 120.dp,
-    waveFirstSrc: Int = R.drawable.soundwave_first_default_0,
-    waveSecondSrc: Int = R.drawable.soundwave_second_default_0
+    pastContent: Int = R.drawable.soundwave_first_default_0,
+    futureContent: Int = R.drawable.soundwave_second_default_0
 ) {
     val configuration = LocalConfiguration.current
     val density = LocalDensity.current
@@ -85,7 +85,7 @@ fun ComposeSoundLineView(
         Row(
             modifier = Modifier.fillMaxSize()
         ) {
-            // Left scroll area
+            // Left scroll area - past content
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -93,8 +93,8 @@ fun ComposeSoundLineView(
                     .horizontalScroll(leftScrollState)
             ) {
                 Image(
-                    painter = painterResource(id = waveFirstSrc),
-                    contentDescription = "Left waveform",
+                    painter = painterResource(id = pastContent),
+                    contentDescription = "Past timeline content",
                     modifier = Modifier
                         .fillMaxHeight()
                         .padding(start = halfScreenWidthDp + 2.dp),
@@ -110,7 +110,7 @@ fun ComposeSoundLineView(
                     .background(Color.Transparent)
             )
             
-            // Right scroll area  
+            // Right scroll area - future content
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -118,8 +118,8 @@ fun ComposeSoundLineView(
                     .horizontalScroll(rightScrollState)
             ) {
                 Image(
-                    painter = painterResource(id = waveSecondSrc),
-                    contentDescription = "Right waveform",
+                    painter = painterResource(id = futureContent),
+                    contentDescription = "Future timeline content",
                     modifier = Modifier
                         .fillMaxHeight()
                         .padding(end = halfScreenWidthDp + 2.dp),
@@ -131,14 +131,14 @@ fun ComposeSoundLineView(
 }
 
 /**
- * Extended Compose SoundLineView with additional configuration options
+ * Extended Compose TimelineView with additional configuration options
  */
 @Composable
-fun ComposeSoundLineViewAdvanced(
+fun ComposeTimelineViewAdvanced(
     modifier: Modifier = Modifier,
     height: Dp = 120.dp,
-    waveFirstSrc: Int = R.drawable.soundwave_first_default_0,
-    waveSecondSrc: Int = R.drawable.soundwave_second_default_0,
+    pastContent: Int = R.drawable.soundwave_first_default_0,
+    futureContent: Int = R.drawable.soundwave_second_default_0,
     offsetFraction: Float = 1f/12f, // Configurable offset as fraction of screen width
     dividerWidth: Dp = 2.dp,
     dividerColor: Color = Color.Transparent,
@@ -201,7 +201,7 @@ fun ComposeSoundLineViewAdvanced(
         Row(
             modifier = Modifier.fillMaxSize()
         ) {
-            // Left scroll area
+            // Left scroll area - past content
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -209,8 +209,8 @@ fun ComposeSoundLineViewAdvanced(
                     .horizontalScroll(leftScrollState)
             ) {
                 Image(
-                    painter = painterResource(id = waveFirstSrc),
-                    contentDescription = "Left waveform",
+                    painter = painterResource(id = pastContent),
+                    contentDescription = "Past timeline content",
                     modifier = Modifier
                         .fillMaxHeight()
                         .padding(start = halfScreenWidthDp + paddingExtra),
@@ -226,7 +226,7 @@ fun ComposeSoundLineViewAdvanced(
                     .background(dividerColor)
             )
             
-            // Right scroll area
+            // Right scroll area - future content
             Box(
                 modifier = Modifier
                     .weight(1f)
@@ -234,8 +234,8 @@ fun ComposeSoundLineViewAdvanced(
                     .horizontalScroll(rightScrollState)
             ) {
                 Image(
-                    painter = painterResource(id = waveSecondSrc),
-                    contentDescription = "Right waveform",
+                    painter = painterResource(id = futureContent),
+                    contentDescription = "Future timeline content",
                     modifier = Modifier
                         .fillMaxHeight()
                         .padding(end = halfScreenWidthDp + paddingExtra),
