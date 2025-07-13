@@ -1,26 +1,24 @@
 package fprieto.soundline
 
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
-import androidx.core.content.ContextCompat
+import com.github.fprieto.audiowaveformview.R
 
 /**
- * Composable wrapper for the SoundLineView
+ * Modern Compose-native AudioWaveformView
+ * Uses the new ComposeSoundLineView implementation without XML dependencies
  * 
  * @param modifier The modifier to be applied to the view
  * @param height The height of the waveform view
  * @param waveFirstSrc Resource ID for the first wave drawable (optional)
  * @param waveSecondSrc Resource ID for the second wave drawable (optional)
- * @param autoInit Whether to automatically initialize the waves when the view is created
+ * @param offsetFraction Scroll offset as fraction of screen width (default: 1/12)
+ * @param dividerWidth Width of the center divider
+ * @param dividerColor Color of the center divider
  */
 @Composable
 fun AudioWaveformView(
@@ -28,74 +26,49 @@ fun AudioWaveformView(
     height: Dp = 200.dp,
     waveFirstSrc: Int? = null,
     waveSecondSrc: Int? = null,
-    autoInit: Boolean = true
+    offsetFraction: Float = 1f/12f,
+    dividerWidth: Dp = 2.dp,
+    dividerColor: Color = Color.Transparent
 ) {
-    val context = LocalContext.current
-    val density = LocalDensity.current
-    
-    // Convert height to pixels
-    val heightPx = with(density) { height.roundToPx() }
-    
-    // Remember the SoundLineView to avoid recreating it
-    val soundLineView = remember {
-        SoundLineView(context).apply {
-            layoutParams = android.view.ViewGroup.LayoutParams(
-                android.view.ViewGroup.LayoutParams.MATCH_PARENT,
-                heightPx
-            )
-        }
-    }
-    
-    // Set custom drawables if provided
-    LaunchedEffect(waveFirstSrc, waveSecondSrc) {
-        waveFirstSrc?.let { firstSrc ->
-            val firstDrawable = ContextCompat.getDrawable(context, firstSrc)
-            soundLineView.setWaveDrawables(firstDrawable, null)
-        }
-        
-        waveSecondSrc?.let { secondSrc ->
-            val secondDrawable = ContextCompat.getDrawable(context, secondSrc)
-            soundLineView.setWaveDrawables(null, secondDrawable)
-        }
-        
-        if (waveFirstSrc != null || waveSecondSrc != null) {
-            soundLineView.refreshWaveDrawables()
-        }
-    }
-    
-    // Auto-initialize waves if requested
-    LaunchedEffect(autoInit) {
-        if (autoInit) {
-            soundLineView.post {
-                soundLineView.initWaves()
-            }
-        }
-    }
-    
-    AndroidView(
-        factory = { soundLineView },
-        modifier = modifier
-            .fillMaxWidth()
-            .height(height),
-        update = { view ->
-            // Update the view if needed
-            if (autoInit) {
-                view.post {
-                    view.initWaves()
-                }
-            }
-        }
+    ComposeSoundLineViewAdvanced(
+        modifier = modifier.fillMaxWidth(),
+        height = height,
+        waveFirstSrc = waveFirstSrc ?: R.drawable.soundwave_first_default_0,
+        waveSecondSrc = waveSecondSrc ?: R.drawable.soundwave_second_default_0,
+        offsetFraction = offsetFraction,
+        dividerWidth = dividerWidth,
+        dividerColor = dividerColor
     )
 }
 
 /**
- * Composable wrapper with Material 3 styling
+ * Simplified AudioWaveformView with basic configuration
+ * Perfect for most use cases
+ */
+@Composable
+fun AudioWaveformViewSimple(
+    modifier: Modifier = Modifier,
+    height: Dp = 120.dp,
+    waveFirstSrc: Int? = null,
+    waveSecondSrc: Int? = null
+) {
+    ComposeSoundLineView(
+        modifier = modifier.fillMaxWidth(),
+        height = height,
+        waveFirstSrc = waveFirstSrc ?: R.drawable.soundwave_first_default_0,
+        waveSecondSrc = waveSecondSrc ?: R.drawable.soundwave_second_default_0
+    )
+}
+
+/**
+ * Material 3 styled AudioWaveformView
+ * Uses the modern Compose implementation with Material 3 design principles
  * 
  * @param modifier The modifier to be applied to the view
  * @param height The height of the waveform view
  * @param waveFirstSrc Resource ID for the first wave drawable (optional)
  * @param waveSecondSrc Resource ID for the second wave drawable (optional)
- * @param autoInit Whether to automatically initialize the waves when the view is created
+ * @param offsetFraction Scroll offset as fraction of screen width
  */
 @Composable
 fun AudioWaveformViewMaterial3(
@@ -103,13 +76,15 @@ fun AudioWaveformViewMaterial3(
     height: Dp = 200.dp,
     waveFirstSrc: Int? = null,
     waveSecondSrc: Int? = null,
-    autoInit: Boolean = true
+    offsetFraction: Float = 1f/12f
 ) {
     AudioWaveformView(
         modifier = modifier,
         height = height,
         waveFirstSrc = waveFirstSrc,
         waveSecondSrc = waveSecondSrc,
-        autoInit = autoInit
+        offsetFraction = offsetFraction,
+        dividerWidth = 1.dp,
+        dividerColor = Color.Transparent
     )
 } 

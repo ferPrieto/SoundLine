@@ -86,8 +86,7 @@ fun AudioWaveformScreen() {
                 
                 AudioWaveformView(
                     modifier = Modifier.fillMaxWidth(),
-                    height = 120.dp,
-                    autoInit = true
+                    height = 120.dp
                 )
             }
         }
@@ -111,8 +110,7 @@ fun AudioWaveformScreen() {
                     modifier = Modifier.fillMaxWidth(),
                     height = 120.dp,
                     waveFirstSrc = R.drawable.custom_first_default_0,
-                    waveSecondSrc = R.drawable.custom_second_default_0,
-                    autoInit = true
+                    waveSecondSrc = R.drawable.custom_second_default_0
                 )
             }
         }
