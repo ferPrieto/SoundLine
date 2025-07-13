@@ -1,14 +1,17 @@
 package fprieto.soundline.view
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -36,6 +39,8 @@ class ComposeMainActivity : ComponentActivity() {
 
 @Composable
 fun AudioWaveformScreen() {
+    val context = LocalContext.current
+    
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -111,21 +116,55 @@ fun AudioWaveformScreen() {
                 )
             }
         }
+        
+        // Button to navigate to use cases
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Button(
+            onClick = {
+                val intent = Intent(context, UseCasesActivity::class.java)
+                context.startActivity(intent)
+            },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                text = "View Use Cases",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Medium
+            )
+        }
     }
 }
 
 @Composable
 fun AudioWaveformAppTheme(content: @Composable () -> Unit) {
-    val colorScheme = lightColorScheme(
-        primary = Color(0xFF6200EE),
-        secondary = Color(0xFF03DAC6),
-        background = Color(0xFFF5F5F5),
-        surface = Color.White,
-        onPrimary = Color.White,
-        onSecondary = Color.Black,
-        onBackground = Color.Black,
-        onSurface = Color.Black
-    )
+    val colorScheme = if (isSystemInDarkTheme()) {
+        darkColorScheme(
+            primary = Color(0xFFBB86FC),
+            secondary = Color(0xFF03DAC6),
+            background = Color(0xFF121212),
+            surface = Color(0xFF1E1E1E),
+            onPrimary = Color.Black,
+            onSecondary = Color.Black,
+            onBackground = Color.White,
+            onSurface = Color.White,
+            primaryContainer = Color(0xFF3700B3),
+            onPrimaryContainer = Color.White
+        )
+    } else {
+        lightColorScheme(
+            primary = Color(0xFF6200EE),
+            secondary = Color(0xFF03DAC6),
+            background = Color(0xFFF5F5F5),
+            surface = Color.White,
+            onPrimary = Color.White,
+            onSecondary = Color.Black,
+            onBackground = Color.Black,
+            onSurface = Color.Black,
+            primaryContainer = Color(0xFFE1C4FF),
+            onPrimaryContainer = Color(0xFF3700B3)
+        )
+    }
     
     MaterialTheme(
         colorScheme = colorScheme,
