@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    
+    <!-- Left timeline with waveform -->
+    <group android:translateX="15" android:translateY="50">
+        <!-- Past timeline base -->
+        <path
+            android:pathData="M0,10 L40,10"
+            android:strokeColor="#FF6D00"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"/>
+        
+        <!-- Past waveform segments -->
+        <path
+            android:pathData="M5,5 L5,15 M12,2 L12,18 M19,0 L19,20 M26,3 L26,17 M33,6 L33,14"
+            android:strokeColor="#FF6D00"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"/>
+    </group>
+    
+    <!-- Center playhead -->
+    <path
+        android:pathData="M60,40 L60,80"
+        android:strokeColor="#FF6D00"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"/>
+    
+    <!-- Playhead indicator -->
+    <path
+        android:pathData="M60,60m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#FF6D00"/>
+    
+    <!-- Right timeline with waveform -->
+    <group android:translateX="65" android:translateY="50">
+        <!-- Future timeline base -->
+        <path
+            android:pathData="M0,10 L40,10"
+            android:strokeColor="#FF6D00"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"/>
+        
+        <!-- Future waveform segments -->
+        <path
+            android:pathData="M2,8 L2,12 M9,6 L9,14 M16,4 L16,16 M23,7 L23,13 M30,9 L30,11 M37,8 L37,12"
+            android:strokeColor="#FF6D00"
+            android:strokeWidth="3"
+            android:strokeLineCap="round"/>
+    </group>
+    
+</vector> 
