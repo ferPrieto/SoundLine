@@ -5,20 +5,20 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
     
-    <!-- Left timeline -->
-    <group android:translateX="24" android:translateY="48">
+    <!-- Left timeline with waveform -->
+    <group android:translateX="20" android:translateY="49">
         <!-- Past timeline base -->
         <path
-            android:pathData="M0,6 L24,6"
+            android:pathData="M0,5 L32,5"
             android:strokeColor="#FF6D00"
-            android:strokeWidth="3"
+            android:strokeWidth="3.6"
             android:strokeLineCap="round"/>
         
-        <!-- Past waveform -->
+        <!-- Past waveform segments -->
         <path
-            android:pathData="M3,3 L3,9 M7,1 L7,11 M11,-1 L11,13 M15,2 L15,10 M19,4 L19,8"
+            android:pathData="M4,1 L4,9 M9.6,-1 L9.6,11 M15.2,-3 L15.2,13 M20.8,0 L20.8,10 M26.4,2 L26.4,8"
             android:strokeColor="#FF6D00"
-            android:strokeWidth="2.5"
+            android:strokeWidth="2.7"
             android:strokeLineCap="round"/>
     </group>
     
@@ -26,28 +26,28 @@
     <path
         android:pathData="M54,36 L54,72"
         android:strokeColor="#FF6D00"
-        android:strokeWidth="4"
+        android:strokeWidth="4.5"
         android:strokeLineCap="round"/>
     
     <!-- Playhead indicator -->
     <path
-        android:pathData="M54,54m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"
+        android:pathData="M54,54m-3.6,0a3.6,3.6 0,1 1,7.2 0a3.6,3.6 0,1 1,-7.2 0"
         android:fillColor="#FF6D00"/>
     
-    <!-- Right timeline -->
-    <group android:translateX="60" android:translateY="48">
+    <!-- Right timeline with waveform -->
+    <group android:translateX="56" android:translateY="49">
         <!-- Future timeline base -->
         <path
-            android:pathData="M0,6 L24,6"
+            android:pathData="M0,5 L32,5"
             android:strokeColor="#FF6D00"
-            android:strokeWidth="3"
+            android:strokeWidth="3.6"
             android:strokeLineCap="round"/>
         
-        <!-- Future waveform -->
+        <!-- Future waveform segments -->
         <path
-            android:pathData="M2,4 L2,8 M6,2 L6,10 M10,0 L10,12 M14,3 L14,9 M18,5 L18,7"
+            android:pathData="M1.6,3 L1.6,7 M7.2,1 L7.2,9 M12.8,-1 L12.8,11 M18.4,2 L18.4,8 M24,4 L24,6 M29.6,3 L29.6,7"
             android:strokeColor="#FF6D00"
-            android:strokeWidth="2.5"
+            android:strokeWidth="2.7"
             android:strokeLineCap="round"/>
     </group>
     

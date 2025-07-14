@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="120dp"
+    android:viewportWidth="280"
+    android:viewportHeight="120">
+    
+    <!-- Background (transparent) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M0,0 L280,0 L280,120 L0,120 Z"/>
+    
+    <!-- Central axis line -->
+    <path
+        android:fillColor="#E0E0E0"
+        android:pathData="M0,60 L280,60 L280,61 L0,61 Z"/>
+    
+    <!-- Main waveform bars (top half) - All 70 bars in #FFFFFF -->
+    <!-- Bar 1 --> <path android:fillColor="#FFFFFF" android:pathData="M2,60 L2,30 L4,30 L4,60 Z"/>
+    <!-- Bar 2 --> <path android:fillColor="#FFFFFF" android:pathData="M6,60 L6,25 L8,25 L8,60 Z"/>
+    <!-- Bar 3 --> <path android:fillColor="#FFFFFF" android:pathData="M10,60 L10,35 L12,35 L12,60 Z"/>
+    <!-- Bar 4 --> <path android:fillColor="#FFFFFF" android:pathData="M14,60 L14,20 L16,20 L16,60 Z"/>
+    <!-- Bar 5 --> <path android:fillColor="#FFFFFF" android:pathData="M18,60 L18,40 L20,40 L20,60 Z"/>
+    <!-- Bar 6 --> <path android:fillColor="#FFFFFF" android:pathData="M22,60 L22,15 L24,15 L24,60 Z"/>
+    <!-- Bar 7 --> <path android:fillColor="#FFFFFF" android:pathData="M26,60 L26,45 L28,45 L28,60 Z"/>
+    <!-- Bar 8 --> <path android:fillColor="#FFFFFF" android:pathData="M30,60 L30,10 L32,10 L32,60 Z"/>
+    <!-- Bar 9 --> <path android:fillColor="#FFFFFF" android:pathData="M34,60 L34,50 L36,50 L36,60 Z"/>
+    <!-- Bar 10 --> <path android:fillColor="#FFFFFF" android:pathData="M38,60 L38,5 L40,5 L40,60 Z"/>
+    <!-- Bar 11 --> <path android:fillColor="#FFFFFF" android:pathData="M42,60 L42,55 L44,55 L44,60 Z"/>
+    <!-- Bar 12 --> <path android:fillColor="#FFFFFF" android:pathData="M46,60 L46,8 L48,8 L48,60 Z"/>
+    <!-- Bar 13 --> <path android:fillColor="#FFFFFF" android:pathData="M50,60 L50,52 L52,52 L52,60 Z"/>
+    <!-- Bar 14 --> <path android:fillColor="#FFFFFF" android:pathData="M54,60 L54,12 L56,12 L56,60 Z"/>
+    <!-- Bar 15 --> <path android:fillColor="#FFFFFF" android:pathData="M58,60 L58,48 L60,48 L60,60 Z"/>
+    <!-- Bar 16 --> <path android:fillColor="#FFFFFF" android:pathData="M62,60 L62,18 L64,18 L64,60 Z"/>
+    <!-- Bar 17 --> <path android:fillColor="#FFFFFF" android:pathData="M66,60 L66,42 L68,42 L68,60 Z"/>
+    <!-- Bar 18 --> <path android:fillColor="#FFFFFF" android:pathData="M70,60 L70,22 L72,22 L72,60 Z"/>
+    <!-- Bar 19 --> <path android:fillColor="#FFFFFF" android:pathData="M74,60 L74,38 L76,38 L76,60 Z"/>
+    <!-- Bar 20 --> <path android:fillColor="#FFFFFF" android:pathData="M78,60 L78,28 L80,28 L80,60 Z"/>
+    <!-- Bar 21 --> <path android:fillColor="#FFFFFF" android:pathData="M82,60 L82,46 L84,46 L84,60 Z"/>
+    <!-- Bar 22 --> <path android:fillColor="#FFFFFF" android:pathData="M86,60 L86,32 L88,32 L88,60 Z"/>
+    <!-- Bar 23 --> <path android:fillColor="#FFFFFF" android:pathData="M90,60 L90,44 L92,44 L92,60 Z"/>
+    <!-- Bar 24 --> <path android:fillColor="#FFFFFF" android:pathData="M94,60 L94,36 L96,36 L96,60 Z"/>
+    <!-- Bar 25 --> <path android:fillColor="#FFFFFF" android:pathData="M98,60 L98,40 L100,40 L100,60 Z"/>
+    <!-- Bar 26 --> <path android:fillColor="#FFFFFF" android:pathData="M102,60 L102,25 L104,25 L104,60 Z"/>
+    <!-- Bar 27 --> <path android:fillColor="#FFFFFF" android:pathData="M106,60 L106,45 L108,45 L108,60 Z"/>
+    <!-- Bar 28 --> <path android:fillColor="#FFFFFF" android:pathData="M110,60 L110,15 L112,15 L112,60 Z"/>
+    <!-- Bar 29 --> <path android:fillColor="#FFFFFF" android:pathData="M114,60 L114,50 L116,50 L116,60 Z"/>
+    <!-- Bar 30 --> <path android:fillColor="#FFFFFF" android:pathData="M118,60 L118,10 L120,10 L120,60 Z"/>
+    <!-- Bar 31 --> <path android:fillColor="#FFFFFF" android:pathData="M122,60 L122,55 L124,55 L124,60 Z"/>
+    <!-- Bar 32 --> <path android:fillColor="#FFFFFF" android:pathData="M126,60 L126,20 L128,20 L128,60 Z"/>
+    <!-- Bar 33 --> <path android:fillColor="#FFFFFF" android:pathData="M130,60 L130,35 L132,35 L132,60 Z"/>
+    <!-- Bar 34 --> <path android:fillColor="#FFFFFF" android:pathData="M134,60 L134,5 L136,5 L136,60 Z"/>
+    <!-- Bar 35 --> <path android:fillColor="#FFFFFF" android:pathData="M138,60 L138,48 L140,48 L140,60 Z"/>
+    <!-- Bar 36 --> <path android:fillColor="#FFFFFF" android:pathData="M142,60 L142,28 L144,28 L144,60 Z"/>
+    <!-- Bar 37 --> <path android:fillColor="#FFFFFF" android:pathData="M146,60 L146,42 L148,42 L148,60 Z"/>
+    <!-- Bar 38 --> <path android:fillColor="#FFFFFF" android:pathData="M150,60 L150,18 L152,18 L152,60 Z"/>
+    <!-- Bar 39 --> <path android:fillColor="#FFFFFF" android:pathData="M154,60 L154,52 L156,52 L156,60 Z"/>
+    <!-- Bar 40 --> <path android:fillColor="#FFFFFF" android:pathData="M158,60 L158,8 L160,8 L160,60 Z"/>
+    <!-- Bar 41 --> <path android:fillColor="#FFFFFF" android:pathData="M162,60 L162,38 L164,38 L164,60 Z"/>
+    <!-- Bar 42 --> <path android:fillColor="#FFFFFF" android:pathData="M166,60 L166,25 L168,25 L168,60 Z"/>
+    <!-- Bar 43 --> <path android:fillColor="#FFFFFF" android:pathData="M170,60 L170,46 L172,46 L172,60 Z"/>
+    <!-- Bar 44 --> <path android:fillColor="#FFFFFF" android:pathData="M174,60 L174,12 L176,12 L176,60 Z"/>
+    <!-- Bar 45 --> <path android:fillColor="#FFFFFF" android:pathData="M178,60 L178,32 L180,32 L180,60 Z"/>
+    <!-- Bar 46 --> <path android:fillColor="#FFFFFF" android:pathData="M182,60 L182,55 L184,55 L184,60 Z"/>
+    <!-- Bar 47 --> <path android:fillColor="#FFFFFF" android:pathData="M186,60 L186,22 L188,22 L188,60 Z"/>
+    <!-- Bar 48 --> <path android:fillColor="#FFFFFF" android:pathData="M190,60 L190,40 L192,40 L192,60 Z"/>
+    <!-- Bar 49 --> <path android:fillColor="#FFFFFF" android:pathData="M194,60 L194,6 L196,6 L196,60 Z"/>
+    <!-- Bar 50 --> <path android:fillColor="#FFFFFF" android:pathData="M198,60 L198,48 L200,48 L200,60 Z"/>
+    <!-- Bar 51 --> <path android:fillColor="#FFFFFF" android:pathData="M202,60 L202,16 L204,16 L204,60 Z"/>
+    <!-- Bar 52 --> <path android:fillColor="#FFFFFF" android:pathData="M206,60 L206,36 L208,36 L208,60 Z"/>
+    <!-- Bar 53 --> <path android:fillColor="#FFFFFF" android:pathData="M210,60 L210,50 L212,50 L212,60 Z"/>
+    <!-- Bar 54 --> <path android:fillColor="#FFFFFF" android:pathData="M214,60 L214,26 L216,26 L216,60 Z"/>
+    <!-- Bar 55 --> <path android:fillColor="#FFFFFF" android:pathData="M218,60 L218,44 L220,44 L220,60 Z"/>
+    <!-- Bar 56 --> <path android:fillColor="#FFFFFF" android:pathData="M222,60 L222,14 L224,14 L224,60 Z"/>
+    <!-- Bar 57 --> <path android:fillColor="#FFFFFF" android:pathData="M226,60 L226,34 L228,34 L228,60 Z"/>
+    <!-- Bar 58 --> <path android:fillColor="#FFFFFF" android:pathData="M230,60 L230,52 L232,52 L232,60 Z"/>
+    <!-- Bar 59 --> <path android:fillColor="#FFFFFF" android:pathData="M234,60 L234,24 L236,24 L236,60 Z"/>
+    <!-- Bar 60 --> <path android:fillColor="#FFFFFF" android:pathData="M238,60 L238,42 L240,42 L240,60 Z"/>
+    <!-- Bar 61 --> <path android:fillColor="#FFFFFF" android:pathData="M242,60 L242,18 L244,18 L244,60 Z"/>
+    <!-- Bar 62 --> <path android:fillColor="#FFFFFF" android:pathData="M246,60 L246,38 L248,38 L248,60 Z"/>
+    <!-- Bar 63 --> <path android:fillColor="#FFFFFF" android:pathData="M250,60 L250,28 L252,28 L252,60 Z"/>
+    <!-- Bar 64 --> <path android:fillColor="#FFFFFF" android:pathData="M254,60 L254,46 L256,46 L256,60 Z"/>
+    <!-- Bar 65 --> <path android:fillColor="#FFFFFF" android:pathData="M258,60 L258,32 L260,32 L260,60 Z"/>
+    <!-- Bar 66 --> <path android:fillColor="#FFFFFF" android:pathData="M262,60 L262,54 L264,54 L264,60 Z"/>
+    <!-- Bar 67 --> <path android:fillColor="#FFFFFF" android:pathData="M266,60 L266,40 L268,40 L268,60 Z"/>
+    <!-- Bar 68 --> <path android:fillColor="#FFFFFF" android:pathData="M270,60 L270,48 L272,48 L272,60 Z"/>
+    <!-- Bar 69 --> <path android:fillColor="#FFFFFF" android:pathData="M274,60 L274,56 L276,56 L276,60 Z"/>
+    <!-- Bar 70 --> <path android:fillColor="#FFFFFF" android:pathData="M278,60 L278,58 L280,58 L280,60 Z"/>
+    
+    <!-- Reflected bars (bottom half) - All 70 bars in #80FFFFFF -->
+    <!-- Reflected Bar 1 --> <path android:fillColor="#80FFFFFF" android:pathData="M2,60 L2,90 L4,90 L4,60 Z"/>
+    <!-- Reflected Bar 2 --> <path android:fillColor="#80FFFFFF" android:pathData="M6,60 L6,95 L8,95 L8,60 Z"/>
+    <!-- Reflected Bar 3 --> <path android:fillColor="#80FFFFFF" android:pathData="M10,60 L10,85 L12,85 L12,60 Z"/>
+    <!-- Reflected Bar 4 --> <path android:fillColor="#80FFFFFF" android:pathData="M14,60 L14,100 L16,100 L16,60 Z"/>
+    <!-- Reflected Bar 5 --> <path android:fillColor="#80FFFFFF" android:pathData="M18,60 L18,80 L20,80 L20,60 Z"/>
+    <!-- Reflected Bar 6 --> <path android:fillColor="#80FFFFFF" android:pathData="M22,60 L22,105 L24,105 L24,60 Z"/>
+    <!-- Reflected Bar 7 --> <path android:fillColor="#80FFFFFF" android:pathData="M26,60 L26,75 L28,75 L28,60 Z"/>
+    <!-- Reflected Bar 8 --> <path android:fillColor="#80FFFFFF" android:pathData="M30,60 L30,110 L32,110 L32,60 Z"/>
+    <!-- Reflected Bar 9 --> <path android:fillColor="#80FFFFFF" android:pathData="M34,60 L34,70 L36,70 L36,60 Z"/>
+    <!-- Reflected Bar 10 --> <path android:fillColor="#80FFFFFF" android:pathData="M38,60 L38,115 L40,115 L40,60 Z"/>
+    <!-- Reflected Bar 11 --> <path android:fillColor="#80FFFFFF" android:pathData="M42,60 L42,65 L44,65 L44,60 Z"/>
+    <!-- Reflected Bar 12 --> <path android:fillColor="#80FFFFFF" android:pathData="M46,60 L46,112 L48,112 L48,60 Z"/>
+    <!-- Reflected Bar 13 --> <path android:fillColor="#80FFFFFF" android:pathData="M50,60 L50,68 L52,68 L52,60 Z"/>
+    <!-- Reflected Bar 14 --> <path android:fillColor="#80FFFFFF" android:pathData="M54,60 L54,108 L56,108 L56,60 Z"/>
+    <!-- Reflected Bar 15 --> <path android:fillColor="#80FFFFFF" android:pathData="M58,60 L58,72 L60,72 L60,60 Z"/>
+    <!-- Reflected Bar 16 --> <path android:fillColor="#80FFFFFF" android:pathData="M62,60 L62,102 L64,102 L64,60 Z"/>
+    <!-- Reflected Bar 17 --> <path android:fillColor="#80FFFFFF" android:pathData="M66,60 L66,78 L68,78 L68,60 Z"/>
+    <!-- Reflected Bar 18 --> <path android:fillColor="#80FFFFFF" android:pathData="M70,60 L70,98 L72,98 L72,60 Z"/>
+    <!-- Reflected Bar 19 --> <path android:fillColor="#80FFFFFF" android:pathData="M74,60 L74,82 L76,82 L76,60 Z"/>
+    <!-- Reflected Bar 20 --> <path android:fillColor="#80FFFFFF" android:pathData="M78,60 L78,92 L80,92 L80,60 Z"/>
+    <!-- Reflected Bar 21 --> <path android:fillColor="#80FFFFFF" android:pathData="M82,60 L82,74 L84,74 L84,60 Z"/>
+    <!-- Reflected Bar 22 --> <path android:fillColor="#80FFFFFF" android:pathData="M86,60 L86,88 L88,88 L88,60 Z"/>
+    <!-- Reflected Bar 23 --> <path android:fillColor="#80FFFFFF" android:pathData="M90,60 L90,76 L92,76 L92,60 Z"/>
+    <!-- Reflected Bar 24 --> <path android:fillColor="#80FFFFFF" android:pathData="M94,60 L94,84 L96,84 L96,60 Z"/>
+    <!-- Reflected Bar 25 --> <path android:fillColor="#80FFFFFF" android:pathData="M98,60 L98,80 L100,80 L100,60 Z"/>
+    <!-- Reflected Bar 26 --> <path android:fillColor="#80FFFFFF" android:pathData="M102,60 L102,95 L104,95 L104,60 Z"/>
+    <!-- Reflected Bar 27 --> <path android:fillColor="#80FFFFFF" android:pathData="M106,60 L106,75 L108,75 L108,60 Z"/>
+    <!-- Reflected Bar 28 --> <path android:fillColor="#80FFFFFF" android:pathData="M110,60 L110,105 L112,105 L112,60 Z"/>
+    <!-- Reflected Bar 29 --> <path android:fillColor="#80FFFFFF" android:pathData="M114,60 L114,70 L116,70 L116,60 Z"/>
+    <!-- Reflected Bar 30 --> <path android:fillColor="#80FFFFFF" android:pathData="M118,60 L118,110 L120,110 L120,60 Z"/>
+    <!-- Reflected Bar 31 --> <path android:fillColor="#80FFFFFF" android:pathData="M122,60 L122,65 L124,65 L124,60 Z"/>
+    <!-- Reflected Bar 32 --> <path android:fillColor="#80FFFFFF" android:pathData="M126,60 L126,100 L128,100 L128,60 Z"/>
+    <!-- Reflected Bar 33 --> <path android:fillColor="#80FFFFFF" android:pathData="M130,60 L130,85 L132,85 L132,60 Z"/>
+    <!-- Reflected Bar 34 --> <path android:fillColor="#80FFFFFF" android:pathData="M134,60 L134,115 L136,115 L136,60 Z"/>
+    <!-- Reflected Bar 35 --> <path android:fillColor="#80FFFFFF" android:pathData="M138,60 L138,72 L140,72 L140,60 Z"/>
+    <!-- Reflected Bar 36 --> <path android:fillColor="#80FFFFFF" android:pathData="M142,60 L142,92 L144,92 L144,60 Z"/>
+    <!-- Reflected Bar 37 --> <path android:fillColor="#80FFFFFF" android:pathData="M146,60 L146,78 L148,78 L148,60 Z"/>
+    <!-- Reflected Bar 38 --> <path android:fillColor="#80FFFFFF" android:pathData="M150,60 L150,102 L152,102 L152,60 Z"/>
+    <!-- Reflected Bar 39 --> <path android:fillColor="#80FFFFFF" android:pathData="M154,60 L154,68 L156,68 L156,60 Z"/>
+    <!-- Reflected Bar 40 --> <path android:fillColor="#80FFFFFF" android:pathData="M158,60 L158,112 L160,112 L160,60 Z"/>
+    <!-- Reflected Bar 41 --> <path android:fillColor="#80FFFFFF" android:pathData="M162,60 L162,82 L164,82 L164,60 Z"/>
+    <!-- Reflected Bar 42 --> <path android:fillColor="#80FFFFFF" android:pathData="M166,60 L166,95 L168,95 L168,60 Z"/>
+    <!-- Reflected Bar 43 --> <path android:fillColor="#80FFFFFF" android:pathData="M170,60 L170,74 L172,74 L172,60 Z"/>
+    <!-- Reflected Bar 44 --> <path android:fillColor="#80FFFFFF" android:pathData="M174,60 L174,108 L176,108 L176,60 Z"/>
+    <!-- Reflected Bar 45 --> <path android:fillColor="#80FFFFFF" android:pathData="M178,60 L178,88 L180,88 L180,60 Z"/>
+    <!-- Reflected Bar 46 --> <path android:fillColor="#80FFFFFF" android:pathData="M182,60 L182,65 L184,65 L184,60 Z"/>
+    <!-- Reflected Bar 47 --> <path android:fillColor="#80FFFFFF" android:pathData="M186,60 L186,98 L188,98 L188,60 Z"/>
+    <!-- Reflected Bar 48 --> <path android:fillColor="#80FFFFFF" android:pathData="M190,60 L190,80 L192,80 L192,60 Z"/>
+    <!-- Reflected Bar 49 --> <path android:fillColor="#80FFFFFF" android:pathData="M194,60 L194,114 L196,114 L196,60 Z"/>
+    <!-- Reflected Bar 50 --> <path android:fillColor="#80FFFFFF" android:pathData="M198,60 L198,72 L200,72 L200,60 Z"/>
+    <!-- Reflected Bar 51 --> <path android:fillColor="#80FFFFFF" android:pathData="M202,60 L202,104 L204,104 L204,60 Z"/>
+    <!-- Reflected Bar 52 --> <path android:fillColor="#80FFFFFF" android:pathData="M206,60 L206,84 L208,84 L208,60 Z"/>
+    <!-- Reflected Bar 53 --> <path android:fillColor="#80FFFFFF" android:pathData="M210,60 L210,70 L212,70 L212,60 Z"/>
+    <!-- Reflected Bar 54 --> <path android:fillColor="#80FFFFFF" android:pathData="M214,60 L214,94 L216,94 L216,60 Z"/>
+    <!-- Reflected Bar 55 --> <path android:fillColor="#80FFFFFF" android:pathData="M218,60 L218,76 L220,76 L220,60 Z"/>
+    <!-- Reflected Bar 56 --> <path android:fillColor="#80FFFFFF" android:pathData="M222,60 L222,106 L224,106 L224,60 Z"/>
+    <!-- Reflected Bar 57 --> <path android:fillColor="#80FFFFFF" android:pathData="M226,60 L226,86 L228,86 L228,60 Z"/>
+    <!-- Reflected Bar 58 --> <path android:fillColor="#80FFFFFF" android:pathData="M230,60 L230,68 L232,68 L232,60 Z"/>
+    <!-- Reflected Bar 59 --> <path android:fillColor="#80FFFFFF" android:pathData="M234,60 L234,96 L236,96 L236,60 Z"/>
+    <!-- Reflected Bar 60 --> <path android:fillColor="#80FFFFFF" android:pathData="M238,60 L238,78 L240,78 L240,60 Z"/>
+    <!-- Reflected Bar 61 --> <path android:fillColor="#80FFFFFF" android:pathData="M242,60 L242,102 L244,102 L244,60 Z"/>
+    <!-- Reflected Bar 62 --> <path android:fillColor="#80FFFFFF" android:pathData="M246,60 L246,82 L248,82 L248,60 Z"/>
+    <!-- Reflected Bar 63 --> <path android:fillColor="#80FFFFFF" android:pathData="M250,60 L250,92 L252,92 L252,60 Z"/>
+    <!-- Reflected Bar 64 --> <path android:fillColor="#80FFFFFF" android:pathData="M254,60 L254,74 L256,74 L256,60 Z"/>
+    <!-- Reflected Bar 65 --> <path android:fillColor="#80FFFFFF" android:pathData="M258,60 L258,88 L260,88 L260,60 Z"/>
+    <!-- Reflected Bar 66 --> <path android:fillColor="#80FFFFFF" android:pathData="M262,60 L262,66 L264,66 L264,60 Z"/>
+    <!-- Reflected Bar 67 --> <path android:fillColor="#80FFFFFF" android:pathData="M266,60 L266,80 L268,80 L268,60 Z"/>
+    <!-- Reflected Bar 68 --> <path android:fillColor="#80FFFFFF" android:pathData="M270,60 L270,72 L272,72 L272,60 Z"/>
+    <!-- Reflected Bar 69 --> <path android:fillColor="#80FFFFFF" android:pathData="M274,60 L274,64 L276,64 L276,60 Z"/>
+    <!-- Reflected Bar 70 --> <path android:fillColor="#80FFFFFF" android:pathData="M278,60 L278,62 L280,62 L280,60 Z"/>
+    
+</vector> 

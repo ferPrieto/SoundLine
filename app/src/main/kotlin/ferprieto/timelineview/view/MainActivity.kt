@@ -66,7 +66,6 @@ fun MainContent() {
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Logo
             Image(
                 painter = painterResource(id = R.drawable.ic_timeline_logo),
                 contentDescription = stringResource(R.string.timeline_logo_description),
@@ -126,8 +125,9 @@ fun MainContent() {
                 TimelineView(
                     modifier = Modifier.fillMaxWidth(),
                     height = 120.dp,
-                    pastContent = R.drawable.custom_first_default_0,
-                    futureContent = R.drawable.custom_second_default_0
+                    dividerWidth = 0.dp,
+                    pastContent = R.drawable.custom_waveform,
+                    futureContent = R.drawable.custom_waveform_inverted
                 )
             }
         }
