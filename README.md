@@ -43,7 +43,32 @@ fun MyScreen() {
 
 ## Demo
 
-![TimelineView Demo](art/TimelineView-demo.gif)
+<table>
+  <tr>
+    <td align="center">
+      <img src="art/main_screen_light.gif" alt="Main Screen Light" width="300"/>
+      <br>
+      <em>Main Screen - Light Mode</em>
+    </td>
+    <td align="center">
+      <img src="art/main_screen_dark.gif" alt="Main Screen Dark" width="300"/>
+      <br>
+      <em>Main Screen - Dark Mode</em>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="art/usecases_light.gif" alt="Use Cases Light" width="300"/>
+      <br>
+      <em>Use Cases - Light Mode</em>
+    </td>
+    <td align="center">
+      <img src="art/usecases_dark.gif" alt="Use Cases Dark" width="300"/>
+      <br>
+      <em>Use Cases - Dark Mode</em>
+    </td>
+  </tr>
+</table>
 
 ## Structure
 
