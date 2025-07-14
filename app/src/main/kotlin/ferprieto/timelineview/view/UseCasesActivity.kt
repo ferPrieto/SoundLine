@@ -97,12 +97,9 @@ fun UseCasesScreen() {
         )
     )
     
-    Column(
-        modifier = Modifier.fillMaxSize()
-    ) {
+    Column {
         Surface(
             modifier = Modifier.fillMaxWidth(),
-            color = MaterialTheme.colorScheme.primaryContainer,
             shadowElevation = 4.dp
         ) {
             Row(
@@ -119,14 +116,14 @@ fun UseCasesScreen() {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
                         contentDescription = stringResource(R.string.back),
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer
+                        tint = MaterialTheme.colorScheme.primary
                     )
                 }
                 Text(
                     text = stringResource(R.string.timeline_view_use_cases),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onPrimaryContainer,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.padding(start = 8.dp)
                 )
             }

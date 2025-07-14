@@ -8,6 +8,11 @@
     <string name="default_timeline">Default Timeline</string>
     <string name="custom_timeline">Custom Timeline</string>
     <string name="view_use_cases">View Use Cases</string>
+    <string name="timeline_logo_description">Simple orange timeline icon showing synchronized dual timeline</string>
+    
+    <!-- Theme strings -->
+    <string name="dark_mode_enabled">Dark mode enabled</string>
+    <string name="light_mode_enabled">Light mode enabled</string>
     
     <!-- UseCasesActivity strings -->
     <string name="timeline_view_use_cases">TimelineView Use Cases</string>

@@ -1,6 +1,10 @@
-# TimelineView
-
-A synchronized dual-view timeline visualization component for Android with native Compose support.
+<div align="center">
+  <img src="assets/logo.svg" alt="TimelineView Logo" width="100"/>
+  
+  # TimelineView
+  
+  A synchronized dual-view timeline visualization component for Android with native Compose support.
+</div>
 
 ## Overview
 
