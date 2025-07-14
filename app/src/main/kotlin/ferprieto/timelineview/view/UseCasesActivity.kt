@@ -12,13 +12,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import ferprieto.timelineview.TimelineView
 import ferprieto.timelineview.R
+import ferprieto.timelineview.TimelineView
 
 class UseCasesActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,13 +36,70 @@ class UseCasesActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UseCasesScreen() {
+    val context = LocalContext.current
+    
+    val timelineUseCases = listOf(
+        TimelineUseCase(
+            titleRes = R.string.podcast_chapters_title,
+            descriptionRes = R.string.podcast_chapters_description,
+            drawableRes = R.drawable.waveform_podcast_chapters,
+            invertedDrawableRes = R.drawable.waveform_podcast_chapters_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.voice_messages_title,
+            descriptionRes = R.string.voice_messages_description,
+            drawableRes = R.drawable.waveform_voice_message,
+            invertedDrawableRes = R.drawable.waveform_voice_message_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.music_creation_title,
+            descriptionRes = R.string.music_creation_description,
+            drawableRes = R.drawable.waveform_music_creation,
+            invertedDrawableRes = R.drawable.waveform_music_creation_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.video_timeline_title,
+            descriptionRes = R.string.video_timeline_description,
+            drawableRes = R.drawable.waveform_video_timeline,
+            invertedDrawableRes = R.drawable.waveform_video_timeline_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.audiobooks_title,
+            descriptionRes = R.string.audiobooks_description,
+            drawableRes = R.drawable.waveform_audiobooks,
+            invertedDrawableRes = R.drawable.waveform_audiobooks_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.meditation_title,
+            descriptionRes = R.string.meditation_description,
+            drawableRes = R.drawable.waveform_meditation,
+            invertedDrawableRes = R.drawable.waveform_meditation_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.data_sonification_title,
+            descriptionRes = R.string.data_sonification_description,
+            drawableRes = R.drawable.waveform_data_sonification,
+            invertedDrawableRes = R.drawable.waveform_data_sonification_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.interactive_stories_title,
+            descriptionRes = R.string.interactive_stories_description,
+            drawableRes = R.drawable.waveform_interactive_storytelling,
+            invertedDrawableRes = R.drawable.waveform_interactive_storytelling_inverted,
+        ),
+        TimelineUseCase(
+            titleRes = R.string.game_soundtrack_title,
+            descriptionRes = R.string.game_soundtrack_description,
+            drawableRes = R.drawable.waveform_game_soundtrack,
+            invertedDrawableRes = R.drawable.waveform_game_soundtrack_inverted,
+        )
+    )
+    
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        // Custom header with back button
         Surface(
             modifier = Modifier.fillMaxWidth(),
             color = MaterialTheme.colorScheme.primaryContainer,
@@ -55,18 +112,18 @@ fun UseCasesScreen() {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 IconButton(
-                    onClick = { 
-                        // Handle back navigation
+                    onClick = {
+                        (context as? ComponentActivity)?.finish()
                     }
                 ) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
-                        contentDescription = "Back",
+                        contentDescription = stringResource(R.string.back),
                         tint = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
                 Text(
-                    text = "TimelineView Use Cases",
+                    text = stringResource(R.string.timeline_view_use_cases),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
@@ -75,7 +132,6 @@ fun UseCasesScreen() {
             }
         }
         
-        // Use cases content
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize()
@@ -89,6 +145,8 @@ fun UseCasesScreen() {
     }
 }
 
+
+
 @Composable
 fun UseCaseCard(useCase: TimelineUseCase) {
     Card(
@@ -98,24 +156,21 @@ fun UseCaseCard(useCase: TimelineUseCase) {
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            // Title
             Text(
-                text = useCase.title,
+                text = stringResource(useCase.titleRes),
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             
-            // Description
             Text(
-                text = useCase.description,
+                text = stringResource(useCase.descriptionRes),
                 fontSize = 14.sp,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
                 modifier = Modifier.padding(bottom = 16.dp)
             )
             
-            // TimelineView example
             TimelineView(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -129,44 +184,8 @@ fun UseCaseCard(useCase: TimelineUseCase) {
 }
 
 data class TimelineUseCase(
-    val title: String,
-    val description: String,
+    val titleRes: Int,
+    val descriptionRes: Int,
     val drawableRes: Int,
     val invertedDrawableRes: Int
 )
-
-val timelineUseCases = listOf(
-    TimelineUseCase(
-        title = "Audio Waveform Timeline",
-        description = "Perfect for audio editing apps, podcasts, and music players. Shows the played portion vs remaining content.",
-        drawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_first_default_0,
-        invertedDrawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_second_default_0
-    ),
-    TimelineUseCase(
-        title = "Video Timeline Editor",
-        description = "Ideal for video editing interfaces where you need to show past and future frames in a timeline.",
-        drawableRes = R.drawable.custom_first_default_0,
-        invertedDrawableRes = R.drawable.custom_second_default_0
-    ),
-    TimelineUseCase(
-        title = "Progress Visualization",
-        description = "Great for showing progress in long-running tasks, data processing, or multi-step workflows.",
-        drawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_first_default_1,
-        invertedDrawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_second_default_1
-    ),
-    TimelineUseCase(
-        title = "Data Timeline",
-        description = "Perfect for data visualization where you need to show historical vs future data points.",
-        drawableRes = R.drawable.custom_first_default_1,
-        invertedDrawableRes = R.drawable.custom_second_default_1
-    ),
-    TimelineUseCase(
-        title = "Reading Progress",
-        description = "Excellent for e-readers, articles, or documentation where you want to show reading progress.",
-        drawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_first_default_2,
-        invertedDrawableRes = com.github.ferprieto.timelineview.R.drawable.soundwave_second_default_2
-    )
-)
-
-// TimelineViewAppTheme is defined in MainActivity.kt 
-

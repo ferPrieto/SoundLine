@@ -1,4 +1,37 @@
 <resources>
-    <string name="app_name">SoundLine</string>
+    <string name="app_name">TimelineView</string>
     <string name="swipe_left_right">Swipe Left/Right</string>
+    
+    <!-- MainActivity strings -->
+    <string name="timeline_view_demo">TimelineView Demo</string>
+    <string name="synchronized_timeline_scrolling">Synchronized Timeline Scrolling</string>
+    <string name="default_timeline">Default Timeline</string>
+    <string name="custom_timeline">Custom Timeline</string>
+    <string name="view_use_cases">View Use Cases</string>
+    
+    <!-- UseCasesActivity strings -->
+    <string name="timeline_view_use_cases">TimelineView Use Cases</string>
+    <string name="back">Back</string>
+    
+    <!-- Use case titles -->
+    <string name="podcast_chapters_title">🔊 Podcast Chapters</string>
+    <string name="voice_messages_title">🎙️ Voice Messages</string>
+    <string name="music_creation_title">🎶 Music Creation</string>
+    <string name="video_timeline_title">🎞️ Video Timeline</string>
+    <string name="audiobooks_title">📖 Audiobooks</string>
+    <string name="meditation_title">🧘 Meditation</string>
+    <string name="data_sonification_title">📈 Data Sonification</string>
+    <string name="interactive_stories_title">💬 Interactive Stories</string>
+    <string name="game_soundtrack_title">🎮 Game Soundtrack</string>
+    
+    <!-- Use case descriptions -->
+    <string name="podcast_chapters_description">Segmented waveforms with timestamped chapter markers</string>
+    <string name="voice_messages_description">Compact waveform for messaging apps with pause/loud highlights</string>
+    <string name="music_creation_description">Layered waveforms for DJ beat matching and music production</string>
+    <string name="video_timeline_description">Audio waveform underneath video timeline for editing</string>
+    <string name="audiobooks_description">Synchronized audio playback with text highlighting</string>
+    <string name="meditation_description">Calming waveforms with energy-based color shifting</string>
+    <string name="data_sonification_description">Scientific data visualization mapped to audio waveforms</string>
+    <string name="interactive_stories_description">Audio dramas with character-based waveform colors</string>
+    <string name="game_soundtrack_description">Game audio browser with event-specific waveforms</string>
 </resources>
