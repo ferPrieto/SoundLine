@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 }
 
 include(":app", ":audiowaveformview")
-rootProject.name = "SoundLine" 
+rootProject.name = "TimelineView" 
