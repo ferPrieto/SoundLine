@@ -11,8 +11,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven("https://jitpack.io")
     }
 }
 
-include(":app", ":audiowaveformview")
+include(":app", ":timelineview")
 rootProject.name = "TimelineView" 

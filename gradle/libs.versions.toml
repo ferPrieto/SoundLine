@@ -28,8 +28,12 @@ androidxTestRules = "1.5.0"
 androidxTestRunner = "1.5.2"
 espresso = "3.5.1"
 robolectric = "4.10.3"
+timelineview = "1.1.1"
 
 [libraries]
+# TimelineView
+timelineview = { group = "com.github.ferPrieto", name = "timelineview", version.ref = "timelineview" }
+
 # Kotlin
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
 
