@@ -10,10 +10,6 @@
 
 TimelineView provides a synchronized scrolling experience with two content views that move in complementary directions. Originally designed for audio waveform visualization, it's now a versatile component perfect for any timeline-based application.
 
-## Documentation
-
-For detailed API documentation, see [timelineview/README.md](audiowaveformview/README.md)
-
 ## Features
 
 - **Native Compose Implementation**: Pure Compose implementation without XML dependencies
@@ -79,6 +75,9 @@ fun MyScreen() {
 - **`audiowaveformview/`**: Core TimelineView library module
 - **`app/`**: Demo application showcasing various use cases
 
+## Documentation
+
+For detailed API documentation, see [timelineview/README.md](audiowaveformview/README.md)
 
 ## License
 
