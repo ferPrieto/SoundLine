@@ -62,6 +62,9 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.bundles.compose)
     
+    // lib from Maven
+    implementation(libs.timelineview)
+    
     // Compose Debug Tools
     debugImplementation(libs.bundles.compose.debug)
 
@@ -73,8 +76,6 @@ dependencies {
     
     // Compose Testing
     androidTestImplementation(libs.bundles.testing.compose)
-
-    implementation(project(":audiowaveformview"))
 }
 
 // Force resolution of compatible AndroidX versions
