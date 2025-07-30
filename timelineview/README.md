@@ -6,6 +6,58 @@ A synchronized dual-view timeline visualization component for Android with nativ
 
 TimelineView provides a synchronized scrolling experience with two content views that move in complementary directions. The component is built with Jetpack Compose for modern Android development and is perfect for timeline-based applications like audio/video editing, progress visualization, and data browsing.
 
+## Installation
+
+### 1. Add the library in the app-level `build.gradle` file 
+
+Kotlin: 
+
+```kotlin
+implementation("com.github.ferPrieto:timelineview:LATEST_VERSION_NUMBER")
+```
+
+Groovy:
+
+```groovy
+implementation 'com.github.ferPrieto:timelineview:LATEST_VERSION_NUMBER'
+```
+
+If you're using a `libs.versions.toml` file:
+
+1. Add `timelineview = "LATEST_VERSION_NUMBER"` in the `[versions]` section.
+2. Add `timelineview = { group = "com.github.ferPrieto", name = "timelineview", version.ref = "timelineview" }` in the `[libraries]` section
+3. Add `implementation(libs.timelineview)` in the app-level `build.gradle` file
+
+### 2. Declare Jitpack
+
+You need to declare Jitpack in your `settings.gradle` file because that's what's used to publish this library
+
+Kotlin:
+
+```kotlin
+dependencyResolutionManagement {
+   ...
+    repositories {
+      ...
+      maven("https://jitpack.io")
+    }
+}
+```
+
+Groovy:
+
+```groovy
+dependencyResolutionManagement {
+   ...
+    repositories {
+      ...
+      maven { url "https://jitpack.io" }
+    }
+}
+```
+
+
+
 ## Features
 
 - **Native Compose Implementation**: Pure Compose implementation without XML dependencies
