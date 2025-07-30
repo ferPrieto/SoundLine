@@ -22,7 +22,7 @@ Groovy:
 implementation 'com.github.ferPrieto:timelineview:LATEST_VERSION_NUMBER'
 ```
 
-If you're using a `libs.versions.toml` file:
+If you are using a Gradle version catalog through a `libs.versions.toml` file:
 
 1. Add `timelineview = "LATEST_VERSION_NUMBER"` in the `[versions]` section.
 2. Add `timelineview = { group = "com.github.ferPrieto", name = "timelineview", version.ref = "timelineview" }` in the `[libraries]` section
@@ -30,7 +30,7 @@ If you're using a `libs.versions.toml` file:
 
 ### 2. Include Jitpack repository
 
-You need to declare Jitpack in your `settings.gradle` file because that's what's used to publish this library
+You must include `jitpack.io` in your `settings.gradle` file because it's a public dependency
 
 Kotlin:
 
