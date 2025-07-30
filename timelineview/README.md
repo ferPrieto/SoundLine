@@ -8,7 +8,7 @@ TimelineView provides a synchronized scrolling experience with two content views
 
 ## Installation
 
-### 1. Add the library in the app-level `build.gradle` file 
+### 1. Add this dependency in `build.gradle` (app-level)
 
 Kotlin: 
 
