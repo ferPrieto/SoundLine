@@ -72,12 +72,12 @@ fun MyScreen() {
 
 ## Structure
 
-- **`audiowaveformview/`**: Core TimelineView library module
+- **`timelineview/`**: Core TimelineView library module
 - **`app/`**: Demo application showcasing various use cases
 
 ## Documentation
 
-For detailed API documentation, see [audiowaveformview/README.md](audiowaveformview/README.md)
+For detailed API documentation, see [timelineview/README.md](timelineview/README.md)
 
 ## License
 
